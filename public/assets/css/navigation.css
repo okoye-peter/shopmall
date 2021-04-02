@@ -9,6 +9,10 @@
     color: #eb3f14;
 }
 
+.section_one .container .row .col-lg-9.top_nav {
+    justify-content: flex-end;
+}
+
 .section_one .container .row .col-lg-9 ul li a:hover {
     text-decoration: none;
     color: rgba(255, 0, 0, 0.582);
@@ -295,9 +299,16 @@
 }
 
 @media screen and (max-width: 425px) {
+    .section_one .container .row .col-lg-3,
+    .section_two .container .row .col-lg-3 {
+        text-align: center;
+    }
+    .section_one .container .row .col-lg-9.top_nav {
+        justify-content: center;
+    }
     .section_one .container .row .col-lg-9 ul.nav li.nav-item:hover.drop ul.drop-down,
     .section_one .container .row .col-lg-9 ul.nav li.nav-item.drop-currency:hover ul.drop-down-currency {
-        top: 4.5em;
+        top: 3em;
     }
     .section_two .container .row .col-lg-5 form {
         grid-template-columns: 90% 10%;

@@ -1,0 +1,79 @@
+.content_wrapper .slide.carousel .carousel-inner img {
+    height: 42vw;
+    width: 100%;
+}
+
+.content_wrapper .slide.carousel .carousel-control-prev {
+    width: 2em;
+    height: 3.8em;
+    top: 43%;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 24px;
+    text-align: center
+}
+
+.content_wrapper .slide.carousel .carousel-control-next {
+    background: rgba(0, 0, 0, 0.7);
+    height: 5.5em;
+    width: 3em;
+    top: 44%;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-caption {
+    text-align: left;
+    left: 6em;
+    top: 10%;
+}
+
+.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption h1 {
+    font-size: 4vw;
+    color: red;
+    font-weight: 600;
+    font-family: sans-serif;
+    visibility: visible;
+    animation-name: bounceInRight;
+}
+
+.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(2) {
+    font-size: 30px;
+    color: currentcolor;
+    font-weight: 600;
+    font-family: serif;
+    visibility: visible;
+    animation-name: bounceInLeft;
+}
+
+.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(3) {
+    font-size: 25px;
+    color: antiquewhite;
+    font-family: 'times new roman';
+    visibility: visible;
+    animation-name: fadeInUp;
+}
+
+.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(3) .price {
+    color: red;
+    font-weight: 700;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-caption a:last-child {
+    background: red;
+    padding: 0.5em 2em;
+    display: inline-block;
+    margin-top: 0.5em;
+    font-family: serif;
+    visibility: visible;
+    animation-name: fadeInUp;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-caption a:last-child:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.content_wrapper .slide.carousel .carousel-inner:nth-child(2) .carousel-caption h1 {
+    font-size: 3vw;
+    color: cadetblue;
+    font-weight: 600;
+    font-family: ui-monospace;
+}
