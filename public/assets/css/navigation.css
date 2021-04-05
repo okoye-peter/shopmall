@@ -190,13 +190,14 @@
     border-radius: 0.2em;
 }
 
-.section_three .navbar {
-    background-color: #051b32;
+.section_three .navbar.navbar-dark {
+    background-color: #0b2946;
     color: white;
 }
 
 .section_three .navbar .navbar-nav {
     justify-content: center;
+    font-family: 'Roboto';
 }
 
 .section_three .navbar-dark .navbar-nav .nav-link {
@@ -205,6 +206,10 @@
 
 
 /* footer section */
+
+.footer_wrapper {
+    font-family: Roboto;
+}
 
 .footer_wrapper .first_section {
     background: linear-gradient( 45deg, black, transparent);

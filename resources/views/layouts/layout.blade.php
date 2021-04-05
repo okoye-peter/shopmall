@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/navigation.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Poppins:wght@100;200;400&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
     
 
     @stack('styles')

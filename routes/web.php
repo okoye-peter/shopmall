@@ -19,3 +19,4 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+

@@ -108,7 +108,7 @@
 
 <!-- section three begins -->
 <section class="section_three">
-    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>

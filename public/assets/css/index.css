@@ -1,5 +1,5 @@
 .content_wrapper .slide.carousel .carousel-inner img {
-    height: 42vw;
+    height: 42em;
     width: 100%;
 }
 
@@ -25,11 +25,11 @@
     top: 10%;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption h1 {
-    font-size: 4vw;
+.content_wrapper .slide.carousel .carousel-inner .carousel-caption h1 {
+    font-size: 3.5em;
     color: red;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: Roboto;
     visibility: visible;
     animation-name: bounceInRight;
 }
@@ -38,7 +38,7 @@
     font-size: 30px;
     color: currentcolor;
     font-weight: 600;
-    font-family: serif;
+    font-family: Poppins;
     visibility: visible;
     animation-name: bounceInLeft;
 }
@@ -51,29 +51,66 @@
     animation-name: fadeInUp;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(3) .price {
+.content_wrapper .slide.carousel .carousel-inner .carousel-item:first-child .carousel-caption p:nth-child(3) .price {
     color: red;
     font-weight: 700;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-caption a:last-child {
+.content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption a:last-child {
     background: red;
     padding: 0.5em 2em;
     display: inline-block;
     margin-top: 0.5em;
-    font-family: serif;
+    font-family: Poppins;
     visibility: visible;
     animation-name: fadeInUp;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-caption a:last-child:hover {
+.content_wrapper .slide.carousel .carousel-inner .carousel-item:nth-child(2) .carousel-caption p:nth-child(2) {
+    color: black;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-item:nth-child(2) .carousel-caption p:nth-child(3) {
+    color: #125b2f;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-item:last-child .carousel-caption p:nth-child(2) {
+    color: darkturquoise;
+}
+
+.content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption a:last-child:hover {
     text-decoration: none;
     color: white;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:nth-child(2) .carousel-caption h1 {
-    font-size: 3vw;
+.content_wrapper .slide.carousel .carousel-inner:nth-child(2) .carousel-item .carousel-caption h1 {
+    font-size: 3em;
     color: cadetblue;
     font-weight: 600;
     font-family: ui-monospace;
+}
+
+
+/* product category */
+
+.content_wrapper .product_category .category_intro .intro_header {
+    margin-top: 2em;
+    background: steelblue;
+    padding: 0.3em;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+
+@media screen and (max-width:425px) {
+    .content_wrapper .slide.carousel .carousel-inner img {
+        height: 30em;
+    }
+    .content_wrapper .slide.carousel .carousel-inner .carousel-caption h1 {
+        font-size: 2em
+    }
+    .content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption p:nth-child(2),
+    .content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption p:nth-child(3) {
+        font-size: 18px;
+    }
 }
