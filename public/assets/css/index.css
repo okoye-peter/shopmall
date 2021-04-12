@@ -94,12 +94,153 @@
 /* product category */
 
 .content_wrapper .product_category .category_intro .intro_header {
-    margin-top: 2em;
+    margin-top: 3.3em;
     background: steelblue;
     padding: 0.3em;
-    color: white;
+    padding-left: 3em;
     font-weight: 600;
     font-family: 'Roboto';
+    color: white;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure {
+    height: 25em;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure img {
+    height: 25em;
+    width: 100%;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure::before {
+    left: 0;
+    right: 100%;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure::after {
+    left: 100%;
+    right: 0;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure::after,
+.content_wrapper .product_category .category_intro .intro_body figure::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    top: 58.1em;
+    bottom: -44.48em;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    transition: all ease 0.5s 0s;
+    -webkit-transition: all ease 0.5s 0s;
+    height: 63%;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure:hover::before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    right: 50%;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure:hover::after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    left: 50%;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure .text {
+    display: inline-block;
+    position: relative;
+    bottom: 21em;
+    width: 50%;
+    padding-left: 3em;
+    color: mediumblue;
+    font-weight: 700;
+    font-family: Roboto;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure .text p:first-child {
+    color: snow;
+    font-size: 4em;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure .text p:nth-child(2) {
+    font-size: 3em;
+    color: #4caf50;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure .text p:nth-child(3) {
+    font-size: 2em;
+    color: #e80303;
+}
+
+.content_wrapper .product_category .category_intro .intro_body figure .text button {
+    display: inline-block;
+    background: rgb(4 4 4 / 79%);
+    color: white;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    outline: none;
+    border: 0px;
+}
+
+.content_wrapper .product_category .category_body .container .content {
+    border: 1px solid #dee2de;
+}
+
+.content_wrapper .product_category .category_body .container .content {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.content_wrapper .product_category .category_body .container .content .nav-tabs {
+    border-bottom: 0px;
+}
+
+.content_wrapper .product_category .category_body .container .content .nav-tabs .nav-link {
+    background: rgba(125, 125, 125, 0.05);
+    color: #7d7d7d;
+    font-family: Poppins;
+    border-radius: 0;
+    border: 1px solid #e6e6e6;
+}
+
+.content_wrapper .product_category .category_body .container .content .nav-tabs .nav-link.active {
+    border-color: #dee2e6 #fff #fff;
+    background-color: white;
+}
+
+.content_wrapper .product_category .category_body .container .content .nav-tabs .nav-link:hover {
+    background: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    color: #7d7d7d;
+}
+
+.content_wrapper .product_category .category_body .container .content .nav-tabs .nav-link:hover:first-child {
+    border-left-color: transparent;
+}
+
+@media screen and (max-width:1024px) {
+    .content_wrapper .product_category .category_intro .intro_body figure .text p:first-child {
+        font-size: 3em
+    }
+    .content_wrapper .product_category .category_intro .intro_body figure .text p:nth-child(2) {
+        font-size: 2.5em;
+    }
+    .content_wrapper .product_category .category_intro .intro_body figure .text p:nth-child(3) {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .content_wrapper .product_category .category_intro .intro_body figure .text {
+        width: 100%;
+        bottom: 23em;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -113,4 +254,9 @@
     .content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption p:nth-child(3) {
         font-size: 18px;
     }
+}
+
+
+}
+
 }

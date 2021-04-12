@@ -2,6 +2,8 @@
 @section('title', 'Home')
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 @endpush
 @section('content')
@@ -12,29 +14,29 @@
                 <div class="carousel-item active">
                     <img src="{{ asset('assets/images/sincerely-media-qeDcKFADdp8-unsplash.jpg') }}" alt="">
                     <div class="carousel-caption">
-                        <h1 class="wow bounceInRight" data-wow-offset="300">GREAT RANGE OF <br> EXCLUSIVE T-SHIRTS <br> PACKAGES</h1>
-                        <p class="wow bounceInLeft">Exclusive T-shirts Packages to Suit every need</p>
+                        <h1 class="wow bounceInLeft" data-wow-offset="300">GREAT RANGE OF <br> EXCLUSIVE T-SHIRTS <br> PACKAGES</h1>
+                        <p class="wow bounceInRight">Exclusive T-shirts Packages to Suit every need</p>
                         <p class="wow fadeInUp">Starting at: <span class="price">$9.99</span></p>
                         <a class="wow fadeInUp" href="">Shop Now</a>
                     </div>
                 </div>
-                <div class="carousel-item">
+                {{-- <div class="carousel-item">
                     <img src="{{ asset('assets/images/content-pixie-ZB4eQcNqVUs-unsplash.jpg') }}" alt="">
                     <div class="carousel-caption">
-                        <h1 class="wow bounceInRight" data-wow-offset="300">All New Hand Bags <br> Affordable for all </h1>
-                        <p>up to 25% Flat Sale</p>
-                        <p class="wow fadeInUp">@ <span class="price">$29.99</span></p>
-                        <a class="wow fadeInUp" href="">Shop Now</a>
+                        <h1 class="wow" data-wow-offset="300">All New Hand Bags <br> Affordable for all </h1>
+                        <p class="wow">up to 25% Flat Sale</p>
+                        <p class="wow">@ <span class="price">$29.99</span></p>
+                        <a class="wow" href="">Shop Now</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('assets/images/isabel-garza-wQbHY0M-YOk-unsplash.jpg') }}" alt="">
                     <div class="carousel-caption">
-                        <h1>EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
-                        <p>Accessories to complete <br> your everyday Outfit.</p>
-                        <a class="wow fadeInUp" href="">Shop Now</a>
+                        <h1 class="wow" data-wow-offset="300">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
+                        <p class="wow">Accessories to complete <br> your everyday Outfit.</p>
+                        <a class="wow" href="">Shop Now</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <a class="carousel-control-prev" href="#slider" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -49,7 +51,40 @@
                     PRODUCT CATEGORY
                 </div>
                 <div class="intro_body">
-                    <img src="{{ asset('assets/images/lesther-argueta-AiqsbpRacCg-unsplash.jpg') }}" alt="">
+                    <figure>
+                        <img src="{{ asset('assets/images/yaoqi-lai-GXnhban55pQ-unsplash.jpg') }}" alt="">
+                        <div class="text">
+                            <p>New Fall Season 2020</p>
+                            <p>Women's & Men's</p>
+                            <p>PRINTED FASHION</p>
+                            <button type="button">Amazing collection</button>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <div class="category_body">
+                <div class="container">
+                    <div class="content">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="home">Home</div>
+                            <div class="tab-pane container fade" id="menu1">Menu 1</div>
+                            <div class="tab-pane container fade" id="menu2">Menu 2</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,6 +93,7 @@
 
 @push('scripts')
     <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script>
         wow = new WOW(
         {
@@ -67,7 +103,55 @@
             console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
             }
         }
+        
         );
         wow.init();
+        function set_aninmation(){
+            let carousels = document.querySelectorAll('.carousel-item');
+            carousels.forEach(function(carousel) {
+                if(carousel.classList.contains('active')){
+                    let h1 = carousel.querySelector('h1');
+                    h1.classList.remove('bounceInLeft');
+                    h1.classList.add('bounceInLeft');
+
+                    let p1 = h1.nextElementSibling;
+                    p1.classList.remove('bounceInRight');
+                    p1.classList.add('bounceInRight')
+                    if (p1.nextElementSibling.matches('p')) {
+                        p1.nextElementSibling.classList.remove('fadeInUp');
+                        p1.nextElementSibling.classList.add('fadeInUp');
+                    } 
+                    carousel.querySelector('a').classList.remove('fadeInUp');
+                    carousel.querySelector('a').classList.add('fadeInUp')
+                }
+                // else{
+                //     let h1 = carousel.querySelector('h1');
+                //     h1.classList.remove('wow');
+                //     h1.classList.remove('bounceInLeft');
+                //     let p1 = h1.nextElementSibling;
+                //     p1.classList.remove('wow');
+                //     p1.classList.remove('bounceInRight')
+                //     if (p1.nextElementSibling.matches('p')) {
+                //         p1.nextElementSibling.classList.remove('wow');
+                //         p1.nextElementSibling.classList.remove('fadeInUp');
+                //     } 
+                //     carousel.querySelector('a').classList.remove('wow');
+                //     carousel.querySelector('a').classList.remove('fadeInUp')
+                // }
+            });
+        }
+        $(document).ready(function(){
+    //         $("#myCarousel").carousel({interval: 5000});
+            $(".carousel-control-prev").click(function(){
+                set_aninmation()
+            });
+            $(".carousel-control-next").click(function(){
+                set_aninmation()
+            });
+            $("#myCarousel").on('slide.bs.carousel', function(){
+                set_aninmation();
+            });
+    //         setInterval(set_aninmation, 3500)
+        });
     </script>
 @endpush
