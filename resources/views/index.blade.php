@@ -20,23 +20,23 @@
                         <a class="wow fadeInUp" href="">Shop Now</a>
                     </div>
                 </div>
-                {{-- <div class="carousel-item">
+                <div class="carousel-item">
                     <img src="{{ asset('assets/images/content-pixie-ZB4eQcNqVUs-unsplash.jpg') }}" alt="">
                     <div class="carousel-caption">
-                        <h1 class="wow" data-wow-offset="300">All New Hand Bags <br> Affordable for all </h1>
-                        <p class="wow">up to 25% Flat Sale</p>
-                        <p class="wow">@ <span class="price">$29.99</span></p>
-                        <a class="wow" href="">Shop Now</a>
+                        <h1 class="wow bounceInLeft" data-wow-offset="300" style="animation-delay: 2s">All New Hand Bags <br> Affordable for all </h1>
+                        <p class="wow bounceInRight" style="animation-delay: 0.5s">up to 25% Flat Sale</p>
+                        <p class="wow fadeInUp" style="animation-delay: 0.5s">@ <span class="price">$29.99</span></p>
+                        <a class="wow fadeInUp" href="" style="animation-delay: 0.5s">Shop Now</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('assets/images/isabel-garza-wQbHY0M-YOk-unsplash.jpg') }}" alt="">
                     <div class="carousel-caption">
-                        <h1 class="wow" data-wow-offset="300">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
-                        <p class="wow">Accessories to complete <br> your everyday Outfit.</p>
-                        <a class="wow" href="">Shop Now</a>
+                        <h1 class="wow bounceInLeft" data-wow-offset="300" style="animation-delay: 0.5s">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
+                        <p class="wow bounceInRight" style="animation-delay: 0.5s">Accessories to complete <br> your everyday Outfit.</p>
+                        <a class="wow fadeInUp" style="animation-delay: 0.5s" href="">Shop Now</a>
                     </div>
-                </div> --}}
+                </div>
             </div>
             <a class="carousel-control-prev" href="#slider" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -80,14 +80,22 @@
                         
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane container active" id="home">Home</div>
-                            <div class="tab-pane container fade" id="menu1">Menu 1</div>
-                            <div class="tab-pane container fade" id="menu2">Menu 2</div>
+                            <div class="tab-pane active" id="home">
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}" alt=""></a></div>
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}" alt=""></a></div>
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}" alt=""></a></div>
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}" alt=""></a></div>
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}" alt=""></a></div>
+                                <div class="item"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}" alt=""></a></div>
+                            </div>
+                            <div class="tab-pane fade" id="menu1">Menu 1</div>
+                            <div class="tab-pane fade" id="menu2">Menu 2</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>    
 @endsection
 
@@ -100,11 +108,10 @@
             animateClass: 'animated',
             offset:       100,
             callback:     function(box) {
-            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
             }
-        }
-        
-        );
+        });
+
         wow.init();
         function set_aninmation(){
             let carousels = document.querySelectorAll('.carousel-item');
@@ -141,7 +148,6 @@
             });
         }
         $(document).ready(function(){
-    //         $("#myCarousel").carousel({interval: 5000});
             $(".carousel-control-prev").click(function(){
                 set_aninmation()
             });
@@ -153,5 +159,14 @@
             });
     //         setInterval(set_aninmation, 3500)
         });
+        $('.tab-pane').slick({
+            slidesToShow: 4,
+            slidesToScroll:1,
+            dots:false,
+            arrow:true,
+            autoplay:true,
+            autoplaSpeed:2000,
+            infinite:true
+        })
     </script>
 @endpush
