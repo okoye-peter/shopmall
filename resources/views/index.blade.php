@@ -1,52 +1,48 @@
 @extends('layouts.layout')
 @section('title', 'Home')
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+
+<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
+{{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
 @endpush
 @section('content')
     <div class="content_wrapper">
-        <div id="slider" class="carousel slide" data-ride="carousel">
-            <!-- slide show -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('assets/images/sincerely-media-qeDcKFADdp8-unsplash.jpg') }}" alt="">
-                    <div class="carousel-caption">
-                        <h1 class="wow bounceInLeft" data-wow-offset="300">GREAT RANGE OF <br> EXCLUSIVE T-SHIRTS <br> PACKAGES</h1>
-                        <p class="wow bounceInRight">Exclusive T-shirts Packages to Suit every need</p>
-                        <p class="wow fadeInUp">Starting at: <span class="price">$9.99</span></p>
-                        <a class="wow fadeInUp" href="">Shop Now</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/images/content-pixie-ZB4eQcNqVUs-unsplash.jpg') }}" alt="">
-                    <div class="carousel-caption">
-                        <h1 class="wow bounceInLeft" data-wow-offset="300" style="animation-delay: 2s">All New Hand Bags <br> Affordable for all </h1>
-                        <p class="wow bounceInRight" style="animation-delay: 0.5s">up to 25% Flat Sale</p>
-                        <p class="wow fadeInUp" style="animation-delay: 0.5s">@ <span class="price">$29.99</span></p>
-                        <a class="wow fadeInUp" href="" style="animation-delay: 0.5s">Shop Now</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/images/isabel-garza-wQbHY0M-YOk-unsplash.jpg') }}" alt="">
-                    <div class="carousel-caption">
-                        <h1 class="wow bounceInLeft" data-wow-offset="300" style="animation-delay: 0.5s">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
-                        <p class="wow bounceInRight" style="animation-delay: 0.5s">Accessories to complete <br> your everyday Outfit.</p>
-                        <a class="wow fadeInUp" style="animation-delay: 0.5s" href="">Shop Now</a>
-                    </div>
+        <div class="owl-carousel owl-theme" id="carousel">
+            <div class="item">
+                <img src="{{ asset('assets/images/sincerely-media-qeDcKFADdp8-unsplash.jpg') }}" alt="">
+                <div class="carousel-caption">
+                    <h1 class="animated animate__fadeInLeft">GREAT RANGE OF <br> EXCLUSIVE T-SHIRTS <br> PACKAGES</h1>
+                    <p class="animated animate__flipInX">Exclusive T-shirts Packages to Suit every need</p>
+                    <p class="animated animate__fadeInDownBig">Starting at: <span class="price">$9.99</span></p>
+                    <a class="animated animate__fadeInUp" href="">Shop Now</a>
+                </div>    
+            </div>
+            <div class="item">
+                <img src="{{ asset('assets/images/content-pixie-ZB4eQcNqVUs-unsplash.jpg') }}" alt="">
+                <div class="carousel-caption">
+                    <h1 class="animated" style="animation-delay: 0.5s">All New Hand Bags <br> Affordable for all </h1>
+                    <p class="animated" style="animation-delay: 0.5s">up to 25% Flat Sale</p>
+                    <p class="animated" style="animation-delay: 0.5s">@ <span class="price">$29.99</span></p>
+                    <a class="animated" href="" style="animation-delay: 0.5s">Shop Now</a>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#slider" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#slider" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="item">
+                <img src="{{ asset('assets/images/isabel-garza-wQbHY0M-YOk-unsplash.jpg') }}" alt="">
+                <div class="carousel-caption">
+                    <h1 class="animated" style="animation-delay: 0.5s">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
+                    <p class="animated" style="animation-delay: 0.5s">Accessories to complete <br> your everyday Outfit.</p>
+                    <a class="animated" style="animation-delay: 0.5s" href="">Shop Now</a>
+                </div>
+            </div>
         </div>
+
+
+
         <div class="product_category">
-            <div class="category_intro">
+            <div class="category_intro container">
                 <div class="intro_header">
                     PRODUCT CATEGORY
                 </div>
@@ -65,31 +61,43 @@
             <div class="category_body">
                 <div class="container">
                     <div class="content">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
                             </li>
                         </ul>
-                        
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="home">
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}" alt=""></a></div>
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}" alt=""></a></div>
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}" alt=""></a></div>
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}" alt=""></a></div>
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}" alt=""></a></div>
-                                <div class="item"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}" alt=""></a></div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active owl-carousel owl-theme" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}"></a></div>
                             </div>
-                            <div class="tab-pane fade" id="menu1">Menu 1</div>
-                            <div class="tab-pane fade" id="menu2">Menu 2</div>
+                            <div class="tab-pane fade owl-carousel owl-theme" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}"></a></div>
+                            </div>
+                            <div class="tab-pane fade owl-carousel owl-theme" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}"></a></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,73 +108,96 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('assets/js/wow.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script>
-        wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset:       100,
-            callback:     function(box) {
-                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-            }
-        });
-
-        wow.init();
-        function set_aninmation(){
+        function set_aninmation(e){
             let carousels = document.querySelectorAll('.carousel-item');
-            carousels.forEach(function(carousel) {
-                if(carousel.classList.contains('active')){
-                    let h1 = carousel.querySelector('h1');
-                    h1.classList.remove('bounceInLeft');
-                    h1.classList.add('bounceInLeft');
-
-                    let p1 = h1.nextElementSibling;
-                    p1.classList.remove('bounceInRight');
-                    p1.classList.add('bounceInRight')
-                    if (p1.nextElementSibling.matches('p')) {
-                        p1.nextElementSibling.classList.remove('fadeInUp');
-                        p1.nextElementSibling.classList.add('fadeInUp');
-                    } 
-                    carousel.querySelector('a').classList.remove('fadeInUp');
-                    carousel.querySelector('a').classList.add('fadeInUp')
-                }
-                // else{
-                //     let h1 = carousel.querySelector('h1');
-                //     h1.classList.remove('wow');
-                //     h1.classList.remove('bounceInLeft');
-                //     let p1 = h1.nextElementSibling;
-                //     p1.classList.remove('wow');
-                //     p1.classList.remove('bounceInRight')
-                //     if (p1.nextElementSibling.matches('p')) {
-                //         p1.nextElementSibling.classList.remove('wow');
-                //         p1.nextElementSibling.classList.remove('fadeInUp');
-                //     } 
-                //     carousel.querySelector('a').classList.remove('wow');
-                //     carousel.querySelector('a').classList.remove('fadeInUp')
-                // }
-            });
+            let to = carousels[e.to];
+            // let from = carousels[e.from];
+            var newone = to.cloneNode(true);
+            document.querySelector('.carousel-inner').replaceChild(newone, to);
         }
         $(document).ready(function(){
-            $(".carousel-control-prev").click(function(){
-                set_aninmation()
+            let  owl = $("#carousel");
+            owl.owlCarousel({
+                autoplay: true,
+                autoplayhoverpause: true,
+                autoplaytimeout: 5000,
+                items: 1,
+                loop: true,
+                nav: true,
+                dots:false,
+                responsive: {
+                    375:{
+                        nav: false,
+                        animateIn: 'animate__fadeIn',
+                        animateOut: 'animate__fadeOut',
+                    },
+                    425:{
+                        nav:false,
+                        animateIn: 'animate__fadeIn',
+                        animateOut: 'animate__fadeOut',
+                    },
+                    768:{
+                        nav:true,
+                    },
+                    1024:{  
+                        nav:true,
+                    }
+                }
             });
-            $(".carousel-control-next").click(function(){
-                set_aninmation()
+
+            owl.on("changed.owl.carousel", function(event){
+                let item = event.item.index - 2;
+                $('h1').removeClass('animate__fadeInLeft');
+                $('p:nth-child(2)').removeClass('animate__flipInX');
+                $('p:nth-child(3)').removeClass('animate__fadeInDownBig');
+                $('a:last-child').removeClass('animate__fadeInUp');
+                $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animate__fadeInLeft')
+                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(2)').addClass('animate__flipInX')
+                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(3)').addClass('animate__fadeInDownBig')
+                $('.owl-item').not('.cloned').eq(item).find('a:last-child').addClass('animate__fadeInUp')
             });
-            $("#myCarousel").on('slide.bs.carousel', function(){
-                set_aninmation();
+            let owl2 = $("#home");
+            owl2.owlCarousel({
+                autoplay: true,
+                autoplayhoverpause: true,
+                autoplaytimeout: 4000,
+                items: 4,
+                loop: true,
+                nav: true,
+                dots:false,
+                pagination : false,
             });
-    //         setInterval(set_aninmation, 3500)
+            
+            let owl3 = $("#profile");
+            owl3.owlCarousel({
+                autoplay: true,
+                autoplayhoverpause: true,
+                autoplaytimeout: 4000,
+                items: 4,
+                loop: true,
+                nav: true,
+                dots:false,
+                pagination : false,
+            });
+            
+            let owl4 = $("#contact");
+            owl4.owlCarousel({
+                autoplay: true,
+                autoplayhoverpause: true,
+                autoplaytimeout: 4000,
+                items: 4,
+                loop: true,
+                nav: true,
+                dots:false,
+                pagination : false,
+            });
+            
+            
         });
-        $('.tab-pane').slick({
-            slidesToShow: 4,
-            slidesToScroll:1,
-            dots:false,
-            arrow:true,
-            autoplay:true,
-            autoplaSpeed:2000,
-            infinite:true
-        })
+
+    
+
     </script>
 @endpush

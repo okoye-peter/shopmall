@@ -220,7 +220,7 @@
     display: flex;
     padding: 3em 1em;
     align-items: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
 }
 
 .footer_wrapper .first_section .col-lg-3:not(:last-child) {

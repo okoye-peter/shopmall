@@ -1,83 +1,96 @@
-.content_wrapper .slide.carousel .carousel-inner img {
-    height: 42em;
+.content_wrapper .owl-carousel img {
+    height: 40em;
     width: 100%;
 }
 
-.content_wrapper .slide.carousel .carousel-control-prev {
-    width: 2em;
-    height: 3.8em;
-    top: 43%;
-    background: rgba(0, 0, 0, 0.7);
-    font-size: 24px;
-    text-align: center
+.content_wrapper .owl-carousel .owl-nav {
+    bottom: 50%;
 }
 
-.content_wrapper .slide.carousel .carousel-control-next {
-    background: rgba(0, 0, 0, 0.7);
-    height: 5.5em;
-    width: 3em;
-    top: 44%;
+.content_wrapper .owl-carousel .owl-nav button {
+    outline: none;
+    height: 5em;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    border: none;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-caption {
+.content_wrapper .owl-carousel .owl-nav button span {
+    font-size: 44px;
+    padding: 0em 0.3em;
+}
+
+.content_wrapper .owl-carousel .owl-nav button.owl-prev,
+.content_wrapper .owl-carousel .owl-nav button.owl-next {
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.content_wrapper .owl-carousel .owl-nav button.owl-next {
+    left: 95.7vw;
+    position: absolute;
+}
+
+.content_wrapper .owl-carousel .item .carousel-caption {
     text-align: left;
     left: 6em;
-    top: 10%;
+    top: 20%;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-caption h1 {
+.content_wrapper .owl-carousel .item .carousel-caption h1 {
     font-size: 3.5em;
     color: red;
     font-weight: 600;
     font-family: Roboto;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(2) {
+.content_wrapper .owl-carousel .item:first-child .carousel-caption p:nth-child(2) {
     font-size: 30px;
     color: currentcolor;
     font-weight: 600;
     font-family: Poppins;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:first-child .carousel-caption p:nth-child(3) {
+.content_wrapper .owl-carousel .item:first-child .carousel-caption p:nth-child(3) {
     font-size: 25px;
     color: antiquewhite;
     font-family: 'times new roman';
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item:first-child .carousel-caption p:nth-child(3) .price {
+.content_wrapper .owl-carousel .item:first-child .carousel-caption p:nth-child(3) .price {
     color: red;
     font-weight: 700;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption a:last-child {
+.content_wrapper .owl-carousel .item .carousel-caption a:last-child {
     background: red;
     padding: 0.5em 2em;
     display: inline-block;
     margin-top: 0.5em;
     font-family: Poppins;
     visibility: visible;
-    /* animation-name: fadeInUp; */
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item:nth-child(2) .carousel-caption p:nth-child(2) {
+.content_wrapper .owl-carousel .item:nth-child(2) .carousel-caption p:nth-child(2) {
     color: black;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item:nth-child(2) .carousel-caption p:nth-child(3) {
+.content_wrapper .owl-carousel .item:nth-child(2) .carousel-caption p:nth-child(3) {
     color: #125b2f;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item:last-child .carousel-caption p:nth-child(2) {
+.content_wrapper .owl-carousel .item:last-child .carousel-caption p:nth-child(2) {
     color: darkturquoise;
 }
 
-.content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption a:last-child:hover {
+.content_wrapper .owl-carousel .item .carousel-caption a:last-child:hover {
     text-decoration: none;
     color: white;
 }
 
-.content_wrapper .slide.carousel .carousel-inner:nth-child(2) .carousel-item .carousel-caption h1 {
+.content_wrapper .owl-carousel .item:nth-child(2) .carousel-caption h1 {
     font-size: 3em;
     color: cadetblue;
     font-weight: 600;
@@ -122,7 +135,7 @@
     position: absolute;
     background: rgba(255, 255, 255, 0.3);
     opacity: 0;
-    top: 58.1em;
+    top: 56.1em;
     bottom: -44.48em;
     filter: alpha(opacity=0);
     visibility: hidden;
@@ -226,38 +239,93 @@
     border-right: 1px solid #e6e6e6;
 }
 
-.slick-prev {
-    z-index: 99999;
-    left: 1.1em;
+.owl-theme .owl-nav {
+    margin: 0px;
+    position: absolute;
+    bottom: 5em;
 }
 
-.slick-prev,
-.slick-next {
-    transition: all 0.75s ease;
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next,
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev {
+    position: relative;
+    font-size: 40px;
+    z-index: 99999;
+    color: black;
+    background: #d7d6d699;
+    margin: 0;
+    border-radius: 0em;
+    font-size: 40px;
+    transition: all 0.5s ease;
+    outline: none;
     opacity: 0;
 }
 
-.content_wrapper .product_category .category_body .container .content .tab-content:hover .slick-next,
-.content_wrapper .product_category .category_body .container .content .tab-content:hover .slick-prev {
+.content_wrapper .product_category .category_body .container .content .tab-content:hover .owl-carousel .owl-nav button.owl-next,
+.content_wrapper .product_category .category_body .container .content .tab-content:hover .owl-carousel .owl-nav button.owl-prev {
     opacity: 1;
 }
 
-.slick-prev:hover::before,
-.slick-next:hover::before {
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next span,
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev span {
+    height: 100%;
+    margin: 0;
+    padding: 0.5em 0.2em;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    left: 29.8em;
+}
+
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev:hover,
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next:hover {
     color: white;
     background: #696969;
 }
 
-.slick-prev::before {
+
+/* .prev-slick,
+.next-slick {
+    position: absolute;
+    transition: all 0.75s ease;
+    opacity: 0;
+    z-index: 99999;
+    bottom: 40%;
+    font-size: 22px;
+    padding: 0.4em 0.3em;
+    background: #c7c7c7;
+}
+
+.next-slick {
+    right: 0;
+}
+
+.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane:hover .prev-slick,
+.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane:hover .next-slick {
+    opacity: 1;
+}
+
+.prev-slick:hover,
+.next-slick:hover {
+    background: rgba(0, 0, 0, .5);
+    color: white
+} */
+
+
+/* .slick-prev::before {
+    left: 1.1em;
+} */
+
+
+/* .slick-prev::before {
     content: '❮';
 }
 
 .slick-next::before {
     content: '❯';
-    right: 1.7em;
-}
+} */
 
-.slick-prev::before,
+
+/* .slick-prev::before,
 .slick-next::before {
     color: black;
     font-size: 22px;
@@ -265,7 +333,17 @@
     padding: 1em 0.5em;
     position: relative;
     height: 3em;
-    transition: all 0.75s ease;
+    transition: all 0.5s ease;
+}
+
+.slick-next::before:hover,
+.slick-prev::before:hover {
+    background: rgba(0, 0, 0, .5);
+    color: white;
+} */
+
+.owl-carousel.owl-loaded:not(.active) {
+    display: none;
 }
 
 .content_wrapper .product_category .category_body .container .content .tab-content {
@@ -302,14 +380,14 @@
 }
 
 @media screen and (max-width:425px) {
-    .content_wrapper .slide.carousel .carousel-inner img {
+    .content_wrapper .owl-carousel .item img {
         height: 30em;
     }
-    .content_wrapper .slide.carousel .carousel-inner .carousel-caption h1 {
+    .content_wrapper .owl-carousel .item .carousel-caption h1 {
         font-size: 2em
     }
-    .content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption p:nth-child(2),
-    .content_wrapper .slide.carousel .carousel-inner .carousel-item .carousel-caption p:nth-child(3) {
+    .content_wrapper .owl-carousel .item .carousel-caption p:nth-child(2),
+    .content_wrapper .owl-carousel .ite .carousel-caption p:nth-child(3) {
         font-size: 18px;
     }
 }
