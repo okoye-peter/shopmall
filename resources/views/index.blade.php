@@ -10,7 +10,7 @@
 @endpush
 @section('content')
     <div class="content_wrapper">
-        <div class="owl-carousel owl-theme" id="carousel">
+        <div class="owl-carousel owl-theme carousel-section" id="carousel">
             <div class="item">
                 <img src="{{ asset('assets/images/sincerely-media-qeDcKFADdp8-unsplash.jpg') }}" alt="">
                 <div class="carousel-caption">
