@@ -369,8 +369,7 @@
 .content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next,
 .content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev {
     margin: 0;
-    opacity: 0;
-    transition: all 0.5s ease;
+    background-color: transparent;
 }
 
 .content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next {
@@ -385,16 +384,18 @@
 .content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev span {
     padding: 0.1em 0.2em;
     font-size: 40px;
-    background: #afafaf;
+    opacity: 0;
+    background: #afafafba;
+    transition: all 0.5s ease;
 }
 
-.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel:hover .owl-nav button.owl-next,
-.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel:hover .owl-nav button.owl-prev {
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel:hover .owl-nav button.owl-next span,
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel:hover .owl-nav button.owl-prev span {
     opacity: 1;
 }
 
-.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next:hover,
-.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev:hover {
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-next span:hover,
+.content_wrapper .product_category .category_body .container .content .tab-content .owl-carousel .owl-nav button.owl-prev span:hover {
     background: rgba(0, 0, 0, .5);
     color: white;
 }
@@ -403,14 +404,20 @@
     margin-top: 0.06em;
 }
 
-.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane img {
-    width: 80%;
-    height: 12em;
-    transition: all 0.5s ease-in;
+.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane a {
+    display: inline-block;
 }
 
-.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane img:hover {
-    transform: scale(1.1);
+.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane img {
+    width: 95%;
+    height: 12em;
+    transition: transform 0.4s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.content_wrapper .product_category .category_body .container .content .tab-content .tab-pane .item:hover img {
+    transform: scale(1.05);
 }
 
 @media screen and (max-width:1024px) {
