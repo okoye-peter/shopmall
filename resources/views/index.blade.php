@@ -153,13 +153,13 @@
                 $('p:nth-child(2)').removeClass('animate__flipInX');
                 $('p:nth-child(3)').removeClass('animate__fadeInDownBig');
                 $('a:last-child').removeClass('animate__fadeInUp');
-                $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animate__fadeInLeft')
-                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(2)').addClass('animate__flipInX')
-                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(3)').addClass('animate__fadeInDownBig')
-                $('.owl-item').not('.cloned').eq(item).find('a:last-child').addClass('animate__fadeInUp')
+                $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animate__fadeInLeft');
+                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(2)').addClass('animate__flipInX');
+                $('.owl-item').not('.cloned').eq(item).find('p:nth-child(3)').addClass('animate__fadeInDownBig');
+                $('.owl-item').not('.cloned').eq(item).find('a:last-child').addClass('animate__fadeInUp');
             });
-            let owl2 = $("#home");
-            owl2.owlCarousel({
+
+            $("#home").owlCarousel({
                 autoplay: true,
                 autoplayhoverpause: true,
                 autoplaytimeout: 4000,
@@ -170,8 +170,18 @@
                 pagination : false,
             });
             
-            let owl3 = $("#profile");
-            owl3.owlCarousel({
+            $("#profile").owlCarousel({
+                autoplay: true,
+                autoplayhoverpause: true,
+                autoplaytimeout: 4000,
+                items: 4,
+                loop: true,
+                nav: true,
+                dots:false,
+                pagination : false,
+            });
+
+            $("#contact").owlCarousel({
                 autoplay: true,
                 autoplayhoverpause: true,
                 autoplaytimeout: 4000,
@@ -182,18 +192,16 @@
                 pagination : false,
             });
             
-            let owl4 = $("#contact");
-            owl4.owlCarousel({
-                autoplay: true,
-                autoplayhoverpause: true,
-                autoplaytimeout: 4000,
-                items: 4,
-                loop: true,
-                nav: true,
-                dots:false,
-                pagination : false,
-            });
-            
+
+            var tabEl = document.querySelector('button[data-bs-toggle="tab"]')
+            tabEl.addEventListener('shown.bs.tab', function (event) {
+                event.target.querySelectorAll('.item').forEach(div => {
+                    let a = $('item').eq(div);
+                    a.removeClass('animate__zoomIn')
+                    a.addClass('animate__zoomIn')
+                }); // newly activated tab
+                event.relatedTarget // previous active tab
+            })
             
         });
 
