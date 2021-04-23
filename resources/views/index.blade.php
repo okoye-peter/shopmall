@@ -1,12 +1,11 @@
 @extends('layouts.layout')
 @section('title', 'Home')
 @push('styles')
-
-<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
-{{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"> --}}
-<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
 @endpush
 @section('content')
     <div class="content_wrapper">
@@ -48,7 +47,7 @@
                 </div>
                 <div class="intro_body">
                     <figure>
-                        <img src="{{ asset('assets/images/yaoqi-lai-GXnhban55pQ-unsplash.jpg') }}" alt="">
+                        <img src="{{ asset('assets/images/mnz-ToLMORRb97Q-unsplash.jpg') }}" alt="">
                         <div class="text">
                             <p>New Fall Season 2020</p>
                             <p>Women's & Men's</p>
@@ -75,12 +74,91 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active owl-carousel owl-theme" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}"></a></div>
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}"></a></div>
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}"></a></div>
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}"></a></div>
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}"></a></div>
-                                <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}"></a></div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}">
+                                        <p class="product_name">Manala Pilot Wrist Watch Black Costumed MD-011</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="price">$24.00</span>
+                                    </a>
+                                </div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}">
+                                        <p class="product_name">Men's Merrell Moab 2 Vent Hiking Shoe</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="reduced_price">$99.00</span>
+                                        <span class="cancelled_price">$99.00</span>
+                                    </a>
+                                </div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/stil-D4jRahaUaIc-unsplash.jpg') }}">
+                                        <p class="product_name">Trending Quality Black Shoulder Hand Bag</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="price">$35.50</span>
+                                    </a>
+                                </div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/aubrey-hicks-BLvJZdPkP94-unsplash.jpg') }}">
+                                        <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="price">$9.99</span>
+                                    </a>
+                                </div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/xps-Gi3iUJ1FwxI-unsplash.jpg') }}">
+                                        <p class="product_name">Hp Stream 11 Intel Celeron <i class="far fa-registered"></i> 4GB RAM 32GB</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="price">$250.00</span>
+                                    </a>
+                                </div>
+                                <div class="item animate__animated animate__zoomIn">
+                                    <a href="">
+                                        <img src="{{ asset('assets/images/brdnk-vision-RB-mwU3gjsk-unsplash.jpg') }}">
+                                        <p class="product_name">Canon EOS</p>
+                                        <p class="rating">
+                                            <i class="fa fa-star" data-index="0"></i>
+                                            <i class="fa fa-star" data-index="1"></i>
+                                            <i class="fa fa-star" data-index="2"></i>
+                                            <i class="fa fa-star" data-index="3"></i>
+                                            <i class="fa fa-star" data-index="4"></i>
+                                        </p>
+                                        <span class="price">$24.00</span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="tab-pane fade owl-carousel owl-theme" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="item animate__animated animate__zoomIn"><a href=""><img src="{{ asset('assets/images/asmaa-elmasrey-Cex2C1ABarg-unsplash.jpg') }}"></a></div>
@@ -110,13 +188,6 @@
 @push('scripts')
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script>
-        function set_aninmation(e){
-            let carousels = document.querySelectorAll('.carousel-item');
-            let to = carousels[e.to];
-            // let from = carousels[e.from];
-            var newone = to.cloneNode(true);
-            document.querySelector('.carousel-inner').replaceChild(newone, to);
-        }
         $(document).ready(function(){
             let  owl = $("#carousel");
             owl.owlCarousel({
@@ -127,16 +198,14 @@
                 loop: true,
                 nav: true,
                 dots:false,
+                animateIn: 'animate__fadeIn',
+                animateOut: 'animate__fadeOut',
                 responsive: {
                     375:{
                         nav: false,
-                        animateIn: 'animate__fadeIn',
-                        animateOut: 'animate__fadeOut',
                     },
                     425:{
                         nav:false,
-                        animateIn: 'animate__fadeIn',
-                        animateOut: 'animate__fadeOut',
                     },
                     768:{
                         nav:true,
@@ -162,38 +231,78 @@
             $("#home").owlCarousel({
                 autoplay: true,
                 autoplayhoverpause: true,
-                autoplaytimeout: 4000,
+                autoplaytimeout: 10000,
                 items: 5,
                 loop: true,
                 nav: true,
                 dots:false,
-                pagination : false,
+                animateIn: "animate__fadeIn",
+                animateOut: "animate__zoomOutDown",
+                responsive:{
+                    425:{
+                        items:1,
+                        nav: false,
+                    },
+                    768:{
+                        items: 3,
+                        nav: false,
+                    },
+                    1024:{
+                        items: 5,
+                    },
+                }
             });
             
             $("#profile").owlCarousel({
                 autoplay: true,
                 autoplayhoverpause: true,
-                autoplaytimeout: 4000,
+                autoplaytimeout: 10000,
                 items: 5,
                 loop: true,
                 nav: true,
                 dots:false,
-                pagination : false,
+                animateIn: "animate__fadeIn",
+                animateOut: "animate__zoomOutDown",
+                responsive:{
+                    425:{
+                        items:1,
+                        nav: false,
+                    },
+                    768:{
+                        items: 3,
+                        navs: false,
+                    },
+                    1024:{
+                        items: 5,
+                    },
+                }
             });
 
             $("#contact").owlCarousel({
                 autoplay: true,
                 autoplayhoverpause: true,
-                autoplaytimeout: 4000,
+                autoplaytimeout: 10000,
                 items: 5,
                 loop: true,
                 nav: true,
                 dots:false,
-                pagination : false,
-            });
-            
+                animateIn: "animate__fadeIn",
+                animateOut: "animate__zoomOutDown",
+                responsive:{
+                    425:{
+                        items:1,
+                        nav: false,
+                    },
+                    768:{
+                        items: 3,
+                    },
+                    1024:{
+                        items: 5,
+                    },
+                }
+            });            
 
-            var tabEl = document.querySelector('button[data-bs-toggle="tab"]')
+            var tabEl = document.querySelector('button[data-bs-toggle="tab"]');
             tabEl.addEventListener('shown.bs.tab', function (event) {
                 event.target.querySelectorAll('.item').forEach(div => {
                     let a = $('item').eq(div);
@@ -201,8 +310,7 @@
                     a.addClass('animate__zoomIn')
                 }); // newly activated tab
                 event.relatedTarget // previous active tab
-            })
-            
+            });
         });
 
     
