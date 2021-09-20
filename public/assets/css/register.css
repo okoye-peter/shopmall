@@ -1,0 +1,36 @@
+.form_wrapper {
+    /* background: url('../images/freestocks-_3Q3tsJ01nc-unsplash.jpg'); */
+    padding: 3em 5em;
+}
+
+.form_wrapper h3 {
+    margin-top: 0.6em;
+    font-size: 2em;
+    color: #ee9b00;
+    font-family: Calistoga;
+}
+
+.form_wrapper form {
+    margin: 2em 1em 1em;
+}
+
+.form_wrapper form div.form-group {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: baseline;
+}
+
+.form_wrapper label {
+    display: block;
+    text-align: left;
+}
+
+.form_wrapper input.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #023e8a;
+}
+
+.form_wrapper img {
+    height: 100%
+}

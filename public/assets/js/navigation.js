@@ -24,7 +24,7 @@ let categoryDropDown = document.querySelector('.category_list');
 let category_list = categoryDropDown.querySelectorAll('a');
 
 category.addEventListener('click', function() {
-    categoryDropDown.style.height = categoryDropDown.offsetHeight == 0 ? categoryDropDown.scrollHeight + "px" : 0;
+    categoryDropDown.classList.toggle("active");
 });
 
 category_list.forEach(link => {

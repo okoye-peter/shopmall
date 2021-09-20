@@ -7,12 +7,19 @@
             </div>
             <div class="col-lg-9 col-md-10 col-sm-12 col-12 d-flex align-items-center top_nav">
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profile.show') }}">{{auth()->user()->name}}</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endauth
+                    
                     <li class="nav-item drop">
                         <a class="nav-link" href="#"><img src="{{ asset('assets/images/lang/lang-en.png') }}"> <span>English</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <ul class="drop-down drop-toggle">
@@ -55,27 +62,27 @@
                     <!-- category -->
                     <input type="hidden" name="category" value="all category">
                     <button type="submit"><i class="fa fa-search"></i></button>
+                    <dl class="category_list">
+                        <dt><a href="javascript:void(0)">All Category</a></dt>
+                        <dt><a href="javascript:void(0)">Electronics</a></dt>
+                            <dd><a href="javascript:void(0)">Televisions & Home Theatre</a></dd>
+                            <dd><a href="javascript:void(0)">Headphone & Headset</a></dd>
+                            <dd><a href="javascript:void(0)">MP3 Players & Accessories</a></dd>
+                        <dt><a href="javascript:void(0)">Smartphone & Tablet</a></dt>
+                            <dd><a href="javascript:void(0)">Samsung</a></dd>
+                            <dd><a href="javascript:void(0)">Hawaii</a></dd>
+                            <dd><a href="javascript:void(0)">Xiaomi</a></dd>
+                            <dd><a href="javascript:void(0)">Iphone</a></dd>
+                            <dd><a href="javascript:void(0)">Gioone</a></dd>
+                        <dt><a href="javascript:void(0)">Clothes & Footwears</a></dt>
+                            <dd><a href="javascript:void(0)">T-shirt</a></dd>
+                            <dd><a href="javascript:void(0)">Trousers</a></dd>
+                            <dd><a href="javascript:void(0)">Hoodie</a></dd>
+                            <dd><a href="javascript:void(0)">Sandals</a></dd>
+                            <dd><a href="javascript:void(0)">Shoes</a></dd>
+                            <dd><a href="javascript:void(0)">Glasses</a></dd>
+                    </dl>
                 </form>
-                <dl class="category_list">
-                    <dt><a href="javascript:void(0)">All Category</a></dt>
-                    <dt><a href="javascript:void(0)">Electronics</a></dt>
-                        <dd><a href="javascript:void(0)">Televisions & Home Theatre</a></dd>
-                        <dd><a href="javascript:void(0)">Headphone & Headset</a></dd>
-                        <dd><a href="javascript:void(0)">MP3 Players & Accessories</a></dd>
-                    <dt><a href="javascript:void(0)">Smartphone & Tablet</a></dt>
-                        <dd><a href="javascript:void(0)">Samsung</a></dd>
-                        <dd><a href="javascript:void(0)">Hawaii</a></dd>
-                        <dd><a href="javascript:void(0)">Xiaomi</a></dd>
-                        <dd><a href="javascript:void(0)">Iphone</a></dd>
-                        <dd><a href="javascript:void(0)">Gioone</a></dd>
-                    <dt><a href="javascript:void(0)">Clothes & Footwears</a></dt>
-                        <dd><a href="javascript:void(0)">T-shirt</a></dd>
-                        <dd><a href="javascript:void(0)">Trousers</a></dd>
-                        <dd><a href="javascript:void(0)">Hoodie</a></dd>
-                        <dd><a href="javascript:void(0)">Sandals</a></dd>
-                        <dd><a href="javascript:void(0)">Shoes</a></dd>
-                        <dd><a href="javascript:void(0)">Glasses</a></dd>
-                </dl>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                 <a href="#">
@@ -115,7 +122,7 @@
         </button>
         <!-- Navbar links -->
         <ul class="navbar-nav collapse navbar-collapse" id="collapsibleNavbar">
-            <li class="nav-item">
+            <li class="nav-item @if(request()->routeIs('home')) active @endif">
                 <a class="nav-link" href="{{ route('home') }}"><i class="fa fa-home"></i> </a>
             </li>
             <li class="nav-item">
@@ -133,4 +140,16 @@
         </ul>
     </nav>
 </section>
+@auth
+    @if(!auth()->user()->hasVerifiedEmail())
+        <div class="email_warning text-center">
+            Email not verified, click 
+            <form action="{{ route('verification.send') }}" method="post" class="form-inline">
+                @csrf
+                <input type="submit" value="here">
+            </form>
+            to resend email verification link.
+        </div>
+    @endif
+@endauth
 <!-- section three ends -->

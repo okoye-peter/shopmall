@@ -97,7 +97,7 @@
     </div>
     <section class="copyright">
         <div class="container">
-            <div class="row justify-content-center">Copyright &copy; 2020 Okoye's Foundation.</div>
+            <div class="row justify-content-center">Copyright &copy; {{date('Y')}} Okoye's Foundation.</div>
         </div>
     </section>
 </div>
