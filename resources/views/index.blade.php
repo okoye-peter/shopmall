@@ -1,11 +1,14 @@
 @extends('layouts.layout')
 @section('title', 'Home')
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.css') }}">
+{{-- <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- Add the new slick-theme.css if you want the default styling --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 @endpush
 @section('content')
     <div class="content_wrapper">
@@ -57,7 +60,15 @@
             </div>
         </div>
 
-
+        <div class="img_wrapper">
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <figure>
+                        <img src="{{ asset('assets/images/digital-electronic-banner.jpg') }}" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
 
         <div class="product_category">
             <div class="category_body">
@@ -357,13 +368,63 @@
                     </figure>
                 </div>
             </div>
-            
+
+            <div class="container">
+                <div class="row">
+                    <div class="slick_container">
+                        
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                        <div class="shadow item animate__animated animate__zoomIn">
+                            <a href="">
+                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                                <span class="price">$9.99</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>    
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/index.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('assets/js/index.js') }}"></script>
 @endpush

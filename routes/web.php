@@ -21,11 +21,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return redirect('/');
 })->name('dashboard');
 
-Route::get('/email/verify', function () {
-    return view('auth.verify-email');
-})->middleware('auth')->name('verification.notice');
+// Route::get('/email/verify', function () {
+//     return view('auth.verify-email');
+// })->middleware('auth')->name('verification.notice');
 
 
 Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'] )->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', [EmailVerificationController::class, 'sendLink'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+Route::any("*",function(){
+    return redirect('/');
+});
