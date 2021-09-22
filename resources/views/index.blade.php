@@ -373,43 +373,43 @@
                 <div class="row">
                     <div class="slick_container">
                         
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>
                             </a>
                         </div>
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>
                             </a>
                         </div>
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>
                             </a>
                         </div>
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>
                             </a>
                         </div>
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>
                             </a>
                         </div>
-                        <div class="shadow item animate__animated animate__zoomIn">
-                            <a href="">
+                        <div class="item animate__animated animate__zoomIn">
+                            <a href="" class="shadow">
                                 <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
                                 <p class="product_name">Unisex Face Caps Design To Users Request</p>
                                 <span class="price">$9.99</span>

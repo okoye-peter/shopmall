@@ -67,7 +67,7 @@
                         <h3 class="text-center">
                             Register
                         </h3>
-                        <x-jet-validation-errors class="mb-4" />
+                        <x-jet-validation-errors class="mb-4 pl-3" />
                         <form action="{{ route('register') }}" method="post" class="form-inline">
                             @csrf
         
