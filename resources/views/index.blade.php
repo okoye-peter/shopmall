@@ -74,7 +74,6 @@
             <div class="category_body">
                 <div class="container">
                     <div class="content">
-
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
@@ -370,56 +369,55 @@
             </div>
 
             <div class="container">
-                <div class="row">
-                    <div class="slick_container">
-                        
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
-                        <div class="item animate__animated animate__zoomIn">
-                            <a href="" class="shadow">
-                                <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
-                                <p class="product_name">Unisex Face Caps Design To Users Request</p>
-                                <span class="price">$9.99</span>
-                            </a>
-                        </div>
+                <div class="slick_container shadow">
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/watch.jpg') }}">
+                            <p class="product_name">Casio MTP-E320RL-2EVDF Men's Multifunction Blue Dial, Leather Watch</p>
+                            <span class="price">$9.99</span>
+                        </a>
+                    </div>
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg') }}">
+                            <p class="product_name">Men Casual Shoes Fashion Male Sneakers-Black</p>
+                            <span class="price">$14.99</span>
+                        </a>
+                    </div>
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/arno-senoner-oCXVxwTFwqE-unsplash.jpg') }}">
+                            <p class="product_name">Hand Bag Women Shoulder Bags Female Top-handle Bags</p>
+                            <span class="price">$11.99</span>
+                        </a>
+                    </div>
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/robbie-noble-JGcaxNi2fQ8-unsplash.jpg') }}">
+                            <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                            <span class="price">$7.99</span>
+                        </a>
+                    </div>
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/lea-ochel-nsRBbE6-YLs-unsplash.jpg') }}">
+                            <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                            <span class="price">$9.99</span>
+                        </a>
+                    </div>
+                    <div class="item animate__animated animate__zoomIn">
+                        <a href="" class="shadow">
+                            <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}">
+                            <p class="product_name">Unisex Face Caps Design To Users Request</p>
+                            <span class="price">$9.99</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
+        <div class="container">
+            <img src="{{ asset('assets/images/brandfest_adidas_BrandDay_TopStrip.gif') }}" alt="" class="adidas">
+        </div>
     </div>    
 @endsection
 

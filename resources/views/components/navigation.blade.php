@@ -2,10 +2,10 @@
 <section class="section_one">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-3 col-md-2 col-sm-12 col-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
                 <span><i class="fa fa-mobile-alt"></i> HotLine: (+234) 8175719656</span>
             </div>
-            <div class="col-lg-9 col-md-10 col-sm-12 col-12 d-flex align-items-center top_nav">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 d-flex align-items-center top_nav">
                 <ul class="nav">
                     @auth
                         <li class="nav-item">
