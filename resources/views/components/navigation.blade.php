@@ -8,8 +8,18 @@
             <div class="col-lg-9 col-md-9 col-sm-12 col-12 d-flex align-items-center top_nav">
                 <ul class="nav">
                     @auth
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.show') }}">{{auth()->user()->name}}</a>
+                        <li class="nav-item drop">
+                            <a class="nav-link" href="#"><span>{{auth()->user()->name}}</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="drop-down drop-toggle item_list">
+                                <li class="text-center"><a class="nav-link" href="#">Cart (<span class="cart_quantity">3</span>)</a></li>
+                                <li class="text-center"><a class="nav-link" href="#">Wishlist (<span class="wishist_quantity">3</span>)</a></li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="post" class="logout">
+                                        @csrf
+                                        <input type="submit" value="Logout">
+                                    </form>
+                                </li>
+                            </ul>
                         </li>
                     @else
                         <li class="nav-item">

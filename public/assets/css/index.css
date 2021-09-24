@@ -462,8 +462,9 @@
         width: 100%;
         bottom: 23em;
     }
-    .content_wrapper .about_section figure img {
-        height: 18em;
+    .content_wrapper .about_section figure img,
+    .img_wrapper .container .row figure img {
+        height: auto;
     }
     .content_wrapper .about_section .about_box h3,
     .content_wrapper .about_section .about_box span {

@@ -1,0 +1,130 @@
+.container .row .link_direction {
+    padding: 1em 0.5em;
+    font-size: 12px;
+}
+
+.container .row .link_direction a:not(:last-child) {
+    margin-right: 0.3em;
+}
+
+.container .row .link_direction a:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.3em;
+}
+
+.container .row .shadow .category_section h2 {
+    padding: 1em;
+    padding-bottom: 0.5em;
+    font-family: 'Roboto';
+}
+
+.container .row .shadow .category_section ul li a {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 0.5em 2em;
+}
+
+.container .row .shadow .category_section ul li a:hover {
+    background: hsl(0deg 0% 97%);
+    color: #f10000;
+}
+
+.price_section {
+    border-top: 1px solid lightgray;
+    margin-top: 1.5em;
+}
+
+.price_section h2 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 0em;
+    font-weight: 600;
+    font-family: 'Zilla Slab';
+}
+
+.price_section .ui-widget-header {
+    height: 4px !important;
+    background: #53b147;
+}
+
+.price_section .ui-state-default,
+.price_section .ui-widget-content .ui-state-default,
+.price_section .ui-widget-header .ui-state-default {
+    border: 1px solid #c3c3c3;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.price_section .ui-widget-content {
+    height: 2px !important;
+    border: 0;
+    background: #e0e0da;
+}
+
+.price_section .ui-slider-horizontal .ui-slider-range {
+    top: -2px;
+}
+
+.price_section .ui-slider-horizontal .ui-slider-handle {
+    top: -10px;
+    cursor: pointer;
+}
+
+.price_section .ui-slider-handle {
+    outline: none;
+}
+
+.price_section .ui-slider-handle .amount {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    display: none;
+    width: 130px;
+    padding: 10px 0;
+    text-align: center;
+    margin-left: -55px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #53b147;
+    background: #53b147;
+}
+
+.price_section .ui-slider-handle .amount:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border-bottom: 5px solid #53b147;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    background-color: #fff;
+}
+
+.price_section .min-range {
+    float: left;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.price_section .max-range {
+    float: right;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.price_section .slider-range-wrap {
+    position: relative;
+    height: 200px;
+    margin: 0 auto;
+    padding: 40px 20px 0px 20px;
+}

@@ -13,7 +13,20 @@
     justify-content: flex-end;
 }
 
-.section_one .container .row .col-lg-9 ul li a:hover {
+.section_one .container .row .col-lg-9 ul li form.logout input[type=submit] {
+    display: block;
+    width: 9em;
+    padding: 0.4em;
+    background: transparent;
+    cursor: pointer;
+}
+
+.item_list .text-center {
+    display: none;
+}
+
+.section_one .container .row .col-lg-9 ul li a:hover,
+.section_one .container .row .col-lg-9 ul li form.logout input[type=submit]:hover {
     text-decoration: none;
     color: rgba(255, 0, 0, 0.582);
 }
@@ -363,15 +376,30 @@
     .section_one .container .row .col-lg-3,
     .section_two .container .row .col-lg-3 {
         text-align: center;
+        margin-bottom: 0.8em;
+    }
+    .item_list .text-center {
+        display: block;
     }
     .section_one .container .row .col-lg-9.top_nav {
         justify-content: center;
+    }
+    .section_two .container .row .col-lg-3 span {
+        font-size: 22px;
+    }
+    .section_two .container .row .col-lg-5 form button {
+        position: relative;
+        display: inline-block;
+        left: 40%;
+    }
+    .section_two .container .row .col-lg-4 {
+        display: none;
     }
     .section_one .container .row .col-lg-9 ul.nav li.nav-item:hover.drop ul.drop-down,
     .section_one .container .row .col-lg-9 ul.nav li.nav-item.drop-currency:hover ul.drop-down-currency {
         top: 3em;
     }
-    .section_two .container .row .col-lg-5 form {
+    .section_two .container .row .col-lg-3 span .section_two .container .row .col-lg-5 form {
         grid-template-columns: 90% 10%;
         margin-top: 1em;
         margin-bottom: 1em;
