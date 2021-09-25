@@ -30,12 +30,14 @@
     color: #f10000;
 }
 
-.price_section {
+.price_section,
+.discount_section {
     border-top: 1px solid lightgray;
     margin-top: 1.5em;
 }
 
-.price_section h2 {
+.price_section h2,
+.discount_section form h2 {
     text-align: center;
     padding-top: 1em;
     padding-bottom: 0em;
@@ -45,7 +47,7 @@
 
 .price_section .ui-widget-header {
     height: 4px !important;
-    background: #53b147;
+    background: #0b2946;
 }
 
 .price_section .ui-state-default,
@@ -124,7 +126,108 @@
 
 .price_section .slider-range-wrap {
     position: relative;
-    height: 200px;
+    height: 7em;
     margin: 0 auto;
     padding: 40px 20px 0px 20px;
+}
+
+.discount_section form .form-group {
+    margin: 0.5em 0em;
+}
+
+.discount_section .form-group label {
+    padding-left: 2em;
+    display: block;
+    width: 100%;
+    font-family: 'Roboto';
+}
+
+.discount_section .form-group label input {
+    margin-right: 1em;
+}
+
+.product_container h2 {
+    display: block;
+    margin: 2% 0.5em;
+    font-family: 'Zilla Slab';
+    font-weight: 600;
+}
+
+
+/*Styling Selectbox*/
+
+.dropdown {
+    width: 200px;
+    display: inline-block;
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    color: #474747;
+    height: 100%;
+    text-align: left;
+    outline: none;
+    font-family: Roboto;
+}
+
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.float-right .dropdown .select>.fa-angle-down {
+    cursor: pointer;
+    float: right;
+    margin-top: 0.3em;
+    clear: both;
+}
+
+.dropdown:active {
+    background-color: #f8f8f8
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+}
+
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+
+.row .item img {
+    width: 100%;
+    margin: 0em auto;
+    height: 15em;
+    transition: all 0.3s ease-in;
+}
+
+.row .item:hover img {
+    transform: scale(1.05);
 }

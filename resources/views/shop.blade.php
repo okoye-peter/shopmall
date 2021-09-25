@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-12 pl-1">
-                <div class="shadow">
+                <div class="shadow rounded">
                     <article class="category_section">
                         <h2>CATEGORY</h2>
                         <ul>
@@ -53,10 +53,82 @@
                             <span class="max-range">1,000</span>
                         </div>
                     </div>
-                    <div class="discount_section"></div>
+                    <div class="discount_section pb-4">
+                        <form action="">
+                            @csrf
+                            <h2 class="text-center mb-4">Discount Percentage</h2>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="discount" value="50">
+                                    <span>50% or more<span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="discount" value="40">
+                                    <span>40% or more<span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="discount" value="30">
+                                    <span>30% or more<span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="discount" value="20">
+                                    <span>20% or more<span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="discount" value="10">
+                                    <span>10% or more<span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                <div class="shadow rounded">
+                    <div class="row product_container">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <h2>Shop Online in Nigeria</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="clearfix">
+                                <span class="float-right">
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Sort by</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="male">Male</li>
+                                            <li id="female">Female</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
+                            <div class="item">
+                                <img src="{{ asset('assets/images/arno-senoner-HFE2RyC76tw-unsplash.jpg') }}" alt="">
+                                <p class="item_name">Oraimo COMPACT 10000mAh Ultra Slim Power Fast Charging Bank</p>
+                                <p class="item_price">$ <span>9.99</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-12"></div>
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-12"></div>
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-12"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
@@ -101,5 +173,28 @@
                 $(this).children(".amount").fadeOut(300);
             });
         });
+
+        /*Dropdown Menu*/
+        $('.dropdown').click(function () {
+                $(this).attr('tabindex', 1).focus();
+                $(this).toggleClass('active');
+                $(this).find('.dropdown-menu').slideToggle(300);
+            });
+            $('.dropdown').focusout(function () {
+                $(this).removeClass('active');
+                $(this).find('.dropdown-menu').slideUp(300);
+            });
+            $('.dropdown .dropdown-menu li').click(function () {
+                $(this).parents('.dropdown').find('span').text($(this).text());
+                $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+            });
+        /*End Dropdown Menu*/
+
+
+        // $('.dropdown-menu li').click(function () {
+        // var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+        //     msg = '<span class="msg">Hidden input value: ';
+        //     $('.msg').html(msg + input + '</span>');
+        // }); 
     </script>
 @endpush
