@@ -95,11 +95,13 @@
                                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                                     {{ __('Already registered?') }}
                                 </a>
-                
-                                <x-jet-button class="ml-4">
-                                    {{ __('Register') }}
-                                </x-jet-button>
                             </div>  
+                            <x-jet-button class="d-block">
+                                {{ __('Register') }}
+                            </x-jet-button>
+                            <a href="{{ route('google.register') }}" class="google">
+                                <img src="{{ asset('assets/images/google.png') }}" alt="" class="mr-3">sign-in with google
+                            </a>
                         </form>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">

@@ -10,8 +10,9 @@ class RegistrationResponse implements RegisterResponseContract
 {
     public function toResponse($request)
     {
-        // below is the existing response
-        // replace this with your own code
+        if (url()->previous() == route('login')) {
+            return auth()->user() ? redirect('/') : back()->withErrors(['error' => 'Whoops! something went wrong']);
+        }
 
         return auth()->user()
             ? redirect('/')->with('success','registration successful, check your email for email verification mail')

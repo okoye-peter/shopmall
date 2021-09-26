@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\EmailVerificationController;
+use App\Http\Controllers\GoogleAuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,11 @@ Route::view('/shop','shop');
 // Route::get('/email/verify', function () {
 //     return view('auth.verify-email');
 // })->middleware('auth')->name('verification.notice');
+
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/google/register', [GoogleAuthenticationController::class, 'getCredentials'])->name('google.register');
+    Route::get('/google/credentials', [GoogleAuthenticationController::class, 'store'])->name('google.store');
+});
 
 
 Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'] )->middleware(['auth', 'signed'])->name('verification.verify');

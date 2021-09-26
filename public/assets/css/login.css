@@ -17,3 +17,31 @@
     max-width: 100%;
     height: auto;
 }
+
+.container .shadow .row .col-lg-6 form button {
+    width: 100%;
+    justify-content: center;
+    margin: 0.8em 0em;
+}
+
+.container .shadow .row .col-lg-6 form .google {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #111156;
+    border-radius: 0.4em;
+    padding: 0.2em;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.container .shadow .row .col-lg-6 form .google:hover {
+    text-decoration: none;
+    color: black
+}
+
+.container .shadow .row .col-lg-6 form .google img {
+    width: 2em;
+}
