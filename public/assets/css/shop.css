@@ -1,3 +1,4 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 .container .row .link_direction {
     padding: 1em 0.5em;
     font-size: 12px;
@@ -47,7 +48,7 @@
 
 .price_section .ui-widget-header {
     height: 4px !important;
-    background: #0b2946;
+    background: #ee740b;
 }
 
 .price_section .ui-state-default,
@@ -89,8 +90,8 @@
     font-weight: normal;
     font-size: 14px;
     color: #fff;
-    border: 1px solid #53b147;
-    background: #53b147;
+    border: 1px solid #f52929;
+    background: #f52929;
 }
 
 .price_section .ui-slider-handle .amount:after {
@@ -103,7 +104,7 @@
     width: 0;
     height: 0;
     margin-left: -5px;
-    border-bottom: 5px solid #53b147;
+    border-bottom: 5px solid #f10000;
     border-top: 5px solid transparent;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -144,13 +145,6 @@
 
 .discount_section .form-group label input {
     margin-right: 1em;
-}
-
-.product_container h2 {
-    display: block;
-    margin: 2% 0.5em;
-    font-family: 'Zilla Slab';
-    font-weight: 600;
 }
 
 
@@ -221,13 +215,90 @@
     background-color: #e2e2e2
 }
 
+
+/* products section */
+
+.product_container {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.product_container h2 {
+    display: block;
+    margin: 2% 0.5em;
+    font-family: 'Zilla Slab';
+    font-weight: 600;
+}
+
 .row .item img {
     width: 100%;
     margin: 0em auto;
-    height: 15em;
-    transition: all 0.3s ease-in;
+    height: 12em;
+    transition: all 0.25s ease-in;
+}
+
+.row .item {
+    padding: 0.3em;
+}
+
+.row .item:hover {
+    box-shadow: 3px 3px 10px lightgrey;
 }
 
 .row .item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.049);
+}
+
+.row .item .item_name {
+    font-size: 0.75rem;
+    margin: 0.5em;
+}
+
+.row .item .item_price {
+    font-weight: 600;
+    margin: 0em 0em 0.5em 0.5em;
+    font-size: 0.9rem;
+}
+
+.row .item .ratings {
+    position: relative;
+    color: rgb(218, 218, 218);
+}
+
+.row .item .full:before {
+    content: '\f005';
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    display: inline-block;
+}
+
+.row .item .half:before {
+    content: '\f089';
+    font-size: 14px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 3px;
+}
+
+.row .item form button {
+    display: block;
+    color: #ff0202;
+    width: 100%;
+    text-align: center;
+    outline: 0;
+    font-size: 14px;
+    margin-top: 0.8em;
+    padding: 0.5em;
+    background: hsl(15deg 100% 81%);
+    border-radius: 3px;
+    font-weight: 600;
+    font-family: 'Zilla Slab';
+    visibility: hidden;
+}
+
+.row .item:hover form button {
+    visibility: visible;
 }
