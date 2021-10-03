@@ -24,7 +24,7 @@ class GoogleAuthenticationController extends Controller
             ['email' => $googleUser->email],
             [
                 'name' => $googleUser->name,
-                'profile_photo_url' => $googleUser->avatar,
+                'profile_photo_url' => $googleUser->getAvatar(),
                 'password' => Hash::make(Str::random(15))
             ]
         );

@@ -1,304 +1,331 @@
-@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
-.container .row .link_direction {
-    padding: 1em 0.5em;
-    font-size: 12px;
-}
-
-.container .row .link_direction a:not(:last-child) {
-    margin-right: 0.3em;
-}
-
-.container .row .link_direction a:not(:last-child)::after {
-    content: ">";
-    margin-left: 0.3em;
-}
-
-.container .row .shadow .category_section h2 {
-    padding: 1em;
-    padding-bottom: 0.5em;
-    font-family: 'Roboto';
-}
-
-.container .row .shadow .category_section ul li a {
-    display: block;
-    width: 100%;
-    font-size: 14px;
-    padding: 0.5em 2em;
-}
-
-.container .row .shadow .category_section ul li a:hover {
-    background: hsl(0deg 0% 97%);
-    color: #f10000;
-}
-
-.price_section,
-.discount_section {
-    border-top: 1px solid lightgray;
-    margin-top: 1.5em;
-}
-
-.price_section h2,
-.discount_section form h2 {
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: 0em;
-    font-weight: 600;
-    font-family: 'Zilla Slab';
-}
-
-.price_section .ui-widget-header {
-    height: 4px !important;
-    background: #ee740b;
-}
-
-.price_section .ui-state-default,
-.price_section .ui-widget-content .ui-state-default,
-.price_section .ui-widget-header .ui-state-default {
-    border: 1px solid #c3c3c3;
-    border-radius: 13px;
-    background: #fff;
-}
-
-.price_section .ui-widget-content {
-    height: 2px !important;
-    border: 0;
-    background: #e0e0da;
-}
-
-.price_section .ui-slider-horizontal .ui-slider-range {
-    top: -2px;
-}
-
-.price_section .ui-slider-horizontal .ui-slider-handle {
-    top: -10px;
-    cursor: pointer;
-}
-
-.price_section .ui-slider-handle {
-    outline: none;
-}
-
-.price_section .ui-slider-handle .amount {
-    position: absolute;
-    left: 0;
-    top: 35px;
-    display: none;
-    width: 130px;
-    padding: 10px 0;
-    text-align: center;
-    margin-left: -55px;
-    font-weight: normal;
-    font-size: 14px;
-    color: #fff;
-    border: 1px solid #f52929;
-    background: #f52929;
-}
-
-.price_section .ui-slider-handle .amount:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -11px;
-    left: 50%;
-    right: 0;
-    width: 0;
-    height: 0;
-    margin-left: -5px;
-    border-bottom: 5px solid #f10000;
-    border-top: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    background-color: #fff;
-}
-
-.price_section .min-range {
-    float: left;
-    padding-top: 20px;
-    font-size: 12px;
-    color: #888;
-}
-
-.price_section .max-range {
-    float: right;
-    padding-top: 20px;
-    font-size: 12px;
-    color: #888;
-}
-
-.price_section .slider-range-wrap {
-    position: relative;
-    height: 7em;
-    margin: 0 auto;
-    padding: 40px 20px 0px 20px;
-}
-
-.discount_section form .form-group {
-    margin: 0.5em 0em;
-}
-
-.discount_section .form-group label {
-    padding-left: 2em;
-    display: block;
-    width: 100%;
-    font-family: 'Roboto';
-}
-
-.discount_section .form-group label input {
-    margin-right: 1em;
-}
-
-
-/*Styling Selectbox*/
-
-.dropdown {
-    width: 200px;
-    display: inline-block;
-    transition: all .5s ease;
-    position: relative;
-    font-size: 14px;
-    color: #474747;
-    height: 100%;
-    text-align: left;
-    outline: none;
-    font-family: Roboto;
-}
-
-.dropdown .select {
-    cursor: pointer;
-    display: block;
-    padding: 10px;
-    width: 100%;
-}
-
-.float-right .dropdown .select>.fa-angle-down {
-    cursor: pointer;
-    float: right;
-    margin-top: 0.3em;
-    clear: both;
-}
-
-.dropdown:active {
-    background-color: #f8f8f8
-}
-
-.dropdown .dropdown-menu {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    left: 0;
-    margin-top: 1px;
-    box-shadow: 0 1px 2px rgb(204, 204, 204);
-    border-radius: 0 1px 2px 2px;
-    overflow: hidden;
-    display: none;
-    max-height: 144px;
-    overflow-y: auto;
-    z-index: 9
-}
-
-.dropdown .dropdown-menu li {
-    padding: 10px;
-    transition: all .2s ease-in-out;
-    cursor: pointer
-}
-
-.dropdown .dropdown-menu {
-    padding: 0;
-    list-style: none
-}
-
-.dropdown .dropdown-menu li:hover {
-    background-color: #f2f2f2
-}
-
-.dropdown .dropdown-menu li:active {
-    background-color: #e2e2e2
-}
-
-
-/* products section */
-
-.product_container {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid lightgray;
-}
-
-.product_container h2 {
-    display: block;
-    margin: 2% 0.5em;
-    font-family: 'Zilla Slab';
-    font-weight: 600;
-}
-
-.row .item img {
-    width: 100%;
-    margin: 0em auto;
-    height: 12em;
-    transition: all 0.25s ease-in;
-}
-
-.row .item {
-    padding: 0.3em;
-}
-
-.row .item:hover {
-    box-shadow: 3px 3px 10px lightgrey;
-}
-
-.row .item:hover img {
-    transform: scale(1.049);
-}
-
-.row .item .item_name {
-    font-size: 0.75rem;
-    margin: 0.5em;
-}
-
-.row .item .item_price {
-    font-weight: 600;
-    margin: 0em 0em 0.5em 0.5em;
-    font-size: 0.9rem;
-}
-
-.row .item .ratings {
-    position: relative;
-    color: rgb(218, 218, 218);
-}
-
-.row .item .full:before {
-    content: '\f005';
-    font-size: 14px;
-    font-weight: 900;
-    font-family: 'Font Awesome 5 Free';
-    display: inline-block;
-}
-
-.row .item .half:before {
-    content: '\f089';
-    font-size: 14px;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 3px;
-}
-
-.row .item form button {
-    display: block;
-    color: #ff0202;
-    width: 100%;
-    text-align: center;
-    outline: 0;
-    font-size: 14px;
-    margin-top: 0.8em;
-    padding: 0.5em;
-    background: hsl(15deg 100% 81%);
-    border-radius: 3px;
-    font-weight: 600;
-    font-family: 'Zilla Slab';
-    visibility: hidden;
-}
-
-.row .item:hover form button {
-    visibility: visible;
-}
+    @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+    .container .row .link_direction {
+        padding: 1em 0.5em;
+        font-size: 12px;
+    }
+    
+    .container .row .link_direction a:not(:last-child) {
+        margin-right: 0.3em;
+    }
+    
+    .container .row .link_direction a:not(:last-child)::after {
+        content: ">";
+        margin-left: 0.3em;
+    }
+    
+    .container .row .shadow .category_section h2 {
+        padding: 1em;
+        padding-bottom: 0.5em;
+        font-family: 'Roboto';
+    }
+    
+    .container .row .shadow .category_section ul li a {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        padding: 0.5em 2em;
+    }
+    
+    .container .row .shadow .category_section ul li a:hover {
+        background: hsl(0deg 0% 97%);
+        color: #f10000;
+    }
+    
+    .price_section,
+    .discount_section {
+        border-top: 1px solid lightgray;
+        margin-top: 1.5em;
+    }
+    
+    .price_section h2,
+    .discount_section form h2 {
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 0em;
+        font-weight: 600;
+        font-family: 'Zilla Slab';
+    }
+    
+    .price_section .ui-widget-header {
+        height: 4px !important;
+        background: #ee740b;
+    }
+    
+    .price_section .ui-state-default,
+    .price_section .ui-widget-content .ui-state-default,
+    .price_section .ui-widget-header .ui-state-default {
+        border: 1px solid #c3c3c3;
+        border-radius: 13px;
+        background: #fff;
+    }
+    
+    .price_section .ui-widget-content {
+        height: 2px !important;
+        border: 0;
+        background: #e0e0da;
+    }
+    
+    .price_section .ui-slider-horizontal .ui-slider-range {
+        top: -2px;
+    }
+    
+    .price_section .ui-slider-horizontal .ui-slider-handle {
+        top: -10px;
+        cursor: pointer;
+    }
+    
+    .price_section .ui-slider-handle {
+        outline: none;
+    }
+    
+    .price_section .ui-slider-handle .amount {
+        position: absolute;
+        left: 0;
+        top: 35px;
+        display: none;
+        width: 130px;
+        padding: 10px 0;
+        text-align: center;
+        margin-left: -55px;
+        font-weight: normal;
+        font-size: 14px;
+        color: #fff;
+        border: 1px solid #f52929;
+        background: #f52929;
+    }
+    
+    .price_section .ui-slider-handle .amount:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -11px;
+        left: 50%;
+        right: 0;
+        width: 0;
+        height: 0;
+        margin-left: -5px;
+        border-bottom: 5px solid #f10000;
+        border-top: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        background-color: #fff;
+    }
+    
+    .price_section .min-range {
+        float: left;
+        padding-top: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+    
+    .price_section .max-range {
+        float: right;
+        padding-top: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+    
+    .price_section .slider-range-wrap {
+        position: relative;
+        height: 7em;
+        margin: 0 auto;
+        padding: 40px 20px 0px 20px;
+    }
+    
+    .discount_section form .form-group {
+        margin: 0.5em 0em;
+    }
+    
+    .discount_section .form-group label {
+        padding-left: 2em;
+        display: block;
+        width: 100%;
+        font-family: 'Roboto';
+    }
+    
+    .discount_section .form-group label input {
+        margin-right: 1em;
+    }
+    /*Styling Selectbox*/
+    
+    .dropdown {
+        width: 200px;
+        display: inline-block;
+        transition: all .5s ease;
+        position: relative;
+        font-size: 14px;
+        color: #474747;
+        height: 100%;
+        text-align: left;
+        outline: none;
+        font-family: Roboto;
+    }
+    
+    .dropdown .select {
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .float-right .dropdown .select>.fa-angle-down {
+        cursor: pointer;
+        float: right;
+        margin-top: 0.3em;
+        clear: both;
+    }
+    
+    .dropdown:active {
+        background-color: #f8f8f8
+    }
+    
+    .dropdown .dropdown-menu {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        margin-top: 1px;
+        box-shadow: 0 1px 2px rgb(204, 204, 204);
+        border-radius: 0 1px 2px 2px;
+        overflow: hidden;
+        display: none;
+        max-height: 144px;
+        overflow-y: auto;
+        z-index: 9
+    }
+    
+    .dropdown .dropdown-menu li {
+        padding: 10px;
+        transition: all .2s ease-in-out;
+        cursor: pointer
+    }
+    
+    .dropdown .dropdown-menu {
+        padding: 0;
+        list-style: none;
+        border: 0;
+        box-shadow: 2px 2px 20px rgb(211 211 211);
+    }
+    
+    .dropdown .dropdown-menu li:hover {
+        background-color: #f2f2f2
+    }
+    
+    .dropdown .dropdown-menu li:active {
+        background-color: #e2e2e2
+    }
+    /* products section */
+    
+    .product_container {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .product_container h2 {
+        display: block;
+        margin: 2% 0.5em;
+        font-family: 'Zilla Slab';
+        font-weight: 600;
+    }
+    
+    .row .item img {
+        width: 100%;
+        margin: 0em auto;
+        height: 12em;
+        transition: all 0.25s ease-in;
+    }
+    
+    .row .item {
+        padding: 0.3em;
+        display: inline-block;
+    }
+    
+    .row .item:hover {
+        box-shadow: 3px 3px 10px lightgrey;
+        text-decoration: none;
+        color: initial;
+    }
+    
+    .row .item:hover img {
+        transform: scale(1.049);
+    }
+    
+    .row .item .item_name {
+        font-size: 0.75rem;
+        margin: 0.5em;
+    }
+    
+    .row .item .item_price {
+        font-weight: 600;
+        margin: 0em 0em 0.5em 0.5em;
+        font-size: 0.9rem;
+    }
+    
+    .row .item .ratings {
+        position: relative;
+        color: rgb(218, 218, 218);
+    }
+    
+    .row .item .full:before {
+        content: '\f005';
+        font-size: 14px;
+        font-weight: 900;
+        font-family: 'Font Awesome 5 Free';
+        display: inline-block;
+    }
+    
+    .row .item .half:before {
+        content: '\f089';
+        font-size: 14px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        top: 3px;
+    }
+    
+    .row .item form button {
+        display: block;
+        color: #ff0202;
+        width: 100%;
+        text-align: center;
+        outline: 0;
+        font-size: 14px;
+        margin-top: 0.8em;
+        padding: 0.5em;
+        background: hsl(15deg 100% 81%);
+        border-radius: 3px;
+        font-weight: 600;
+        font-family: 'Zilla Slab';
+        visibility: hidden;
+    }
+    
+    .row .item:hover form button {
+        visibility: visible;
+    }
+    
+    nav .pagination .page-item {
+        margin: 0em 0.25em;
+        border-radius: 0.3em;
+    }
+    
+    nav .pagination .page-item .page-link,
+    nav .pagination .page-item:first-child .page-link,
+    nav .pagination .page-item:last-child .page-link {
+        color: black;
+        font-family: 'Roboto';
+        border: 0;
+        border-radius: 0;
+        box-shadow: 2px 2px 14px #14213d1a;
+    }
+    
+    nav .pagination .page-item .page-link:hover {
+        background: #14213d;
+        color: white;
+    }
+    
+    nav .pagination .page-item.active .page-link {
+        background: transparent;
+        color: #14213d;
+        border: 1px solid #14213d;
+    }

@@ -117,7 +117,7 @@
                     </div>
                     <div class="row p-3">
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <div class="item">
+                            <a class="item" href="#">
                                 <img src="{{ asset('assets/images/arno-senoner-HFE2RyC76tw-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Oraimo COMPACT 10000mAh Ultra Slim Power Fast Charging Bank</p>
                                 <p class="item_price">$ <span>13.99</span></p>
@@ -137,10 +137,10 @@
                                     @csrf
                                     <button type="submit">Add To Cart</button>
                                 </form>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <div class="item">
+                            <a class="item" href="#">
                                 <img src="{{ asset('assets/images/allec-gomes-GVilRey5_yU-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Luxury Black Full Metal Digital Lava Wrist Watch- Unisex</p>
                                 <p class="item_price">$ <span>9.99</span></p>
@@ -160,10 +160,10 @@
                                     @csrf
                                     <button type="submit">Add To Cart</button>
                                 </form>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <div class="item">
+                            <a class="item" href="#">
                                 <img src="{{ asset('assets/images/jakob-owens-WzncgWs3RJ4-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Palm BW- Classy Brown White Male Slippers</p>
                                 <p class="item_price">$ <span>10.99</span></p>
@@ -183,10 +183,10 @@
                                     @csrf
                                     <button type="submit">Add To Cart</button>
                                 </form>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <div class="item">
+                            <a class="item" href="#">
                                 <img src="{{ asset('assets/images/olive-ImEzF9B91Mk-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Elegant Euramerican Water Drop Necklace Jewelry</p>
                                 <p class="item_price">$ <span>6.99</span></p>
@@ -206,10 +206,10 @@
                                     @csrf
                                     <button type="submit">Add To Cart</button>
                                 </form>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <div class="item">
+                            <a class="item" href="#">
                                 <img src="{{ asset('assets/images/revolt-164_6wVEHfI-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Canvas MENS BRYCE OXFORD CANVAS</p>
                                 <p class="item_price">$ <span>12.99</span></p>
@@ -229,66 +229,33 @@
                                     @csrf
                                     <button type="submit">Add To Cart</button>
                                 </form>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="row justify-content-center my-2">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                
             </div>
         </div>
     </div>

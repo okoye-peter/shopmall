@@ -23,6 +23,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::view('/shop','shop');
+Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
 
 // Route::get('/email/verify', function () {
 //     return view('auth.verify-email');
