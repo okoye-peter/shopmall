@@ -1,0 +1,173 @@
+.cart_container {
+    background-color: #f0f0f036;
+    min-height: 35em;
+}
+
+.cart_container .container .title {
+    font-size: 2em;
+    font-family: 'Scheherazade New', serif;
+    margin-top: 0.3em;
+    margin-bottom: 1.25em;
+}
+
+.cart_container .container .row .col-lg-12 section img {
+    margin: auto;
+}
+
+.cart_container .container .row .col-lg-12 section h4 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #bcbcbc;
+    margin: 1em 0em;
+    font-family: 'Scheherazade New';
+}
+
+.cart_container .container .row .col-lg-12 section p {
+    font-size: 24px;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .row .col-lg-12 section a {
+    display: block;
+    margin: 1em auto;
+    width: 10em;
+    text-align: center;
+    padding: 0.75em 0.5em;
+    background: #e6bb00;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .item_description {
+    color: #949494;
+}
+
+.cart_container .container .rounded {
+    background: white;
+    margin: 0.5em 0em;
+    margin-bottom: 0.75em;
+}
+
+.cart_container .container .rounded .item .col-lg-6,
+.cart_container .container .rounded .item .col-lg-2 {
+    padding: 0.75rem;
+}
+
+.cart_container .container .rounded .item .col-lg-2 {
+    border-left: 1px solid rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+}
+
+.cart_container .container .rounded .item .col-lg-6 {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.cart_container .container .rounded .item img {
+    height: 5em;
+    width: 5em;
+}
+
+.cart_container .container .rounded .item .seller {
+    color: #808080b5;
+}
+
+.cart_container .container .rounded .item .name {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: chocolate;
+    display: block;
+    margin: 0.35em 0em;
+}
+
+.cart_container .container .rounded .item .name:hover {
+    text-decoration: none;
+    color: chocolate;
+}
+
+.cart_container .container .rounded .item .details .flex form {
+    color: rgb(255 133 7);
+}
+
+.cart_container .container .rounded .item .details .flex form:first-child {
+    margin-right: 2em;
+}
+
+.cart_container .container .rounded .item .col-lg-2 select {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .rounded .item .col-lg-2 .price_wrapper,
+.cart_container .container .rounded .item .col-lg-2 .price_sum_wrapper {
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: #047004;
+}
+
+.cart_container .container .order-details h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 0.75em;
+}
+
+.cart_container .container .order-details section {
+    padding: 1.5em 0.5em 0em;
+}
+
+.cart_container .container .order-details section.prices {
+    border: 1px solid #d6d6d6;
+    border-right: 0;
+    border-left: 0;
+}
+
+.cart_container .container .order-details section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.2em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.cart_container .container .order-details section .grid span:last-child {
+    text-align: end;
+    font-weight: 600;
+}
+
+.cart_container .container .order-details form section .grid input {
+    background: white;
+    padding: 0.3em;
+    border: 1px solid lightgray;
+    border-radius: 0.15em;
+    outline: none;
+}
+
+.cart_container .container .order-details form section button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    font-weight: 600;
+    font-family: 'Work Sans';
+    background: #fb8b24;
+    color: white;
+    margin-top: 3.5em;
+}
+
+.cart_container .container .order-details .col-lg-4 a {
+    display: block;
+    width: 66%;
+    text-align: center;
+    margin: 0.5em 4em;
+    padding: 0.5em;
+    font-family: 'Roboto';
+    background: #e2e2e2;
+}
+
+.cart_container .container .order-details .col-lg-4 a:hover {
+    text-decoration: none;
+    color: black;
+    background: #969696;
+}
