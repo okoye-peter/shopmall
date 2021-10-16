@@ -122,7 +122,7 @@
 
 
             </div>
-            <div class="shadow mt-5 p-3 order-details">
+            <div class="shadow my-5 p-3 order-details">
                 <div class="container-fluid">
                     <h4>Order Summary</h4>
                     <div class="row">

@@ -1,0 +1,42 @@
+.container .row .shadow .image_wrapper img {
+    height: 18em;
+    max-width: 100%;
+    width: 100%;
+}
+
+.container .row .shadow .name_wrapper {
+    padding: 0.5em;
+}
+
+.container .row .shadow .name_wrapper a {
+    font-size: 14px;
+    color: #e28e22;
+    font-family: 'Roboto';
+}
+
+.container .row .shadow .grid {
+    grid-template-columns: 50% 50%;
+    padding: 0.4em;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    align-items: baseline;
+}
+
+.container .row .shadow .grid form {
+    text-align: center;
+}
+
+.container .row .shadow .grid form button {
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+.container .row .shadow .grid form:first-child button {
+    background: #e4870f;
+    color: white;
+}
+
+.container .row .shadow .grid form:last-child button {
+    color: #e4870f;
+}
