@@ -81,9 +81,20 @@
     margin: 0.35em 0em;
 }
 
+.cart_container .container .rounded .item .tablet_price_wrapper {
+    display: none;
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: #047004;
+}
+
 .cart_container .container .rounded .item .name:hover {
     text-decoration: none;
     color: chocolate;
+}
+
+.cart_container .container .rounded .item .tablet {
+    display: none;
 }
 
 .cart_container .container .rounded .item .details .flex form {
@@ -170,4 +181,85 @@
     text-decoration: none;
     color: black;
     background: #969696;
+}
+
+@media screen and ( max-width:768px) {
+    .cart_container .container .item_description {
+        display: none;
+    }
+    .cart_container .container .item_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    .cart_container .container .rounded .item .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cart_container .container .rounded .item img {
+        height: 15em;
+        width: 12em;
+        margin-bottom: 1em;
+    }
+    .cart_container .container .rounded .item .tablet_price_wrapper {
+        display: block;
+    }
+    .cart_container .container .rounded .item .seller {
+        display: none;
+    }
+    .cart_container .container .rounded .item .col-lg-2 {
+        display: none;
+    }
+    .cart_container .container .rounded .item .tablet {
+        display: block;
+    }
+    .cart_container .container .rounded .item .tablet form {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin-top: 0.75em;
+        position: relative;
+    }
+    .cart_container .container .rounded .item .tablet form input {
+        display: inline-block;
+        width: 80%;
+        outline: none;
+        border: 1px solid lightgray;
+        font-family: 'Roboto';
+        border-radius: 0.25em;
+        padding: 0.2em 3.5em 0.2em 0.4em;
+    }
+    .cart_container .container .rounded .item .tablet form button[type=button] {
+        user-select: none;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        cursor: pointer;
+        width: 1.5em;
+        height: 1.5em;
+        background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+        border-radius: 30px;
+        border: 1px solid #8F9092;
+        transition: all 0.2s ease;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #606060;
+        text-shadow: 0 1px #fff;
+        position: absolute;
+        top: 0.4em;
+    }
+    .cart_container .container .rounded .item .tablet form button.btn-reduce {
+        left: 7.3em;
+    }
+    .cart_container .container .rounded .item .tablet form button.btn-increase {
+        left: 9.3em;
+    }
+    .cart_container .container .rounded .item .tablet form button::-moz-focus-inner {
+        border: 0;
+    }
+    .cart_container .container .order-details .col-lg-4 a {
+        margin: 0.65em 0.5em;
+        width: 97.7%;
+    }
 }

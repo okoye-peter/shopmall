@@ -22,7 +22,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return redirect('/');
 })->name('dashboard');
 
-Route::view('/cart','cart');
+Route::view('/wishlist','wishlist');
 Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
 
 // Route::get('/email/verify', function () {
