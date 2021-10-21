@@ -14,7 +14,15 @@
     font-family: 'Roboto';
 }
 
+.container .row .shadow .name_wrapper a span {
+    font-family: Raleway;
+    display: block;
+    font-weight: 600;
+    color: #1b1b1b;
+}
+
 .container .row .shadow .grid {
+    display: grid;
     grid-template-columns: 50% 50%;
     padding: 0.4em;
     font-size: 14px;
@@ -35,8 +43,13 @@
 .container .row .shadow .grid form:first-child button {
     background: #e4870f;
     color: white;
+    border: 0;
+    outline: none;
 }
 
 .container .row .shadow .grid form:last-child button {
     color: #e4870f;
+    border: 0;
+    outline: none;
+    background: transparent;
 }

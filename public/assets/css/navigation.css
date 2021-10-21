@@ -1,3 +1,8 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .section_one {
     background: rgb(231 227 227 / 24%);
     border-bottom: 1px solid #cccccc96;
@@ -92,6 +97,7 @@
     height: 100%;
     outline: none;
     padding: 0.2em 0.7em;
+    border: 0;
 }
 
 .section_two .container .row .col-lg-5 form input::placeholder {
@@ -107,6 +113,7 @@
     font-size: 12px;
     padding: 0em 1em;
     cursor: pointer;
+    margin: 0;
 }
 
 .section_two .container .row .col-lg-5 form p span {
@@ -364,6 +371,7 @@
         font-size: 16px;
     }
     .section_two .container .row .col-lg-4 a section {
+        display: grid;
         grid-template-columns: 40% 60%;
     }
     .section_two .container .row .col-lg-5 .category_list {
@@ -402,6 +410,7 @@
         top: 3em;
     }
     .section_two .container .row .col-lg-3 span .section_two .container .row .col-lg-5 form {
+        display: grid;
         grid-template-columns: 90% 10%;
         margin-top: 1em;
         margin-bottom: 1em;

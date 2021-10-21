@@ -163,13 +163,13 @@
 }
 
 .content_wrapper .product_category .category_intro .intro_body figure {
-    height: 25em;
+    height: 30em;
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
 }
 
 .content_wrapper .product_category .category_intro .intro_body figure img {
-    height: 25em;
+    height: 30em;
     width: 100%;
 }
 
@@ -202,7 +202,7 @@
 .content_wrapper .product_category .category_intro .intro_body figure .text {
     display: inline-block;
     position: relative;
-    bottom: 23em;
+    bottom: 29em;
     width: 55%;
     padding-left: 3em;
     color: mediumblue;
@@ -364,8 +364,9 @@
 
 .content_wrapper .product_category .category_body .container .content .tab-content .tab-pane .item .price,
 .content_wrapper .product_category .category_body .container .content .tab-content .tab-pane .item .reduced_price {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 0, 0, 0.534);
     padding-left: 8px;
 }
 
@@ -405,6 +406,12 @@
     width: 220px;
     margin: 0.4em;
     transform: scale(0.95);
+    color: #357db1;
+}
+
+.content_wrapper .product_category .container .slick_container .item.slick-slide a:hover {
+    text-decoration: none;
+    /* color: in; */
 }
 
 .content_wrapper .product_category .container .slick_container .item.slick-slide a img {
@@ -427,14 +434,18 @@
     margin-bottom: 0.5em;
 }
 
-.content_wrapper .product_category .container .slick_container .item.slick-slide:not(.slick-active.slick-center) a:hover {
-    transform: scale(1.0);
-    color: #e80303;
-}
-
 .content_wrapper .product_category .container .slick_container .item.slick-slide.slick-active.slick-center {
     transform: scale(1.1);
     color: #a30000;
+}
+
+.content_wrapper .product_category .container .slick_container .item.slick-slide.slick-active.slick-center a {
+    color: #e80303;
+}
+
+.content_wrapper .product_category .container .slick_container .item.slick-slide:not(.slick-active.slick-center) a:hover {
+    transform: scale(1.0);
+    color: #e80303;
 }
 
 .content_wrapper .product_category .container .slick_container .item.slick-slide.slick-active.slick-center a span {

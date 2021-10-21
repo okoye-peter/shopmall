@@ -11,7 +11,7 @@ class RegistrationResponse implements RegisterResponseContract
     public function toResponse($request)
     {
         if (url()->previous() == route('login')) {
-            return auth()->user() ? redirect('/') : back()->withErrors(['error' => 'Whoops! something went wrong']);
+            return auth()->user() ? redirect()->intended('/') : back()->withErrors(['error' => 'Whoops! something went wrong']);
         }
 
         return auth()->user()

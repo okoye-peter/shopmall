@@ -21,7 +21,9 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return redirect('/');
 })->name('dashboard');
-
+Route::middleware('auth')->get('/cart',function(){
+    return view('cart');
+});
 Route::view('/wishlist','wishlist');
 Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
 

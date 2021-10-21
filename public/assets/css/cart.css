@@ -138,6 +138,7 @@
 }
 
 .cart_container .container .order-details section .grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 1.2em;
     font-family: 'Work Sans', sans-serif;
@@ -266,6 +267,7 @@
 
 @media screen and (max-width:425px) {
     .cart_container .container .item_wrapper {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 }
