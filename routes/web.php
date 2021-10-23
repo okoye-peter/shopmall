@@ -25,6 +25,8 @@ Route::middleware('auth')->get('/cart',function(){
     return view('cart');
 });
 Route::view('/wishlist','wishlist');
+Route::view('/cart','cart');
+Route::view('/shop','shop');
 Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
 
 // Route::get('/email/verify', function () {
@@ -35,11 +37,16 @@ Route::group(['middleware' => 'guest'], function(){
     Route::get('/google/register', [GoogleAuthenticationController::class, 'getCredentials'])->name('google.register');
     Route::get('/google/credentials', [GoogleAuthenticationController::class, 'store'])->name('google.store');
 });
+Route::group(['middleware' => 'auth'], function(){
+    // email verification routes
+    Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'])->middleware(['signed'])->name('verification.verify');
+    Route::post('/email/verification-notification', [EmailVerificationController::class, 'sendLink'])->middleware(['throttle:6,1'])->name('verification.send');
 
+    // chats routes
+    Route::get('messages', [ChatsController::class, 'fetchMessages']);
+    Route::post('messages', [ChatsController::class, 'sendMessage']);
+});
 
-Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'] )->middleware(['auth', 'signed'])->name('verification.verify');
-
-Route::post('/email/verification-notification', [EmailVerificationController::class, 'sendLink'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 Route::any("*",function(){
     return redirect('/');
 });

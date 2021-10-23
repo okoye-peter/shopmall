@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
     let owl = $("#carousel");
     owl.owlCarousel({
         autoplay: true,
@@ -123,37 +123,36 @@ $(document).ready(function() {
     });
 
 
-    $(document).ready(function() {
-        $('.slick_container').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 5,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            variableWidth: true,
-            variableHeight: true,
-            autoplay: true,
-            arrows: false,
-            responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
+
+    $('.slick_container').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 5,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        variableWidth: true,
+        variableHeight: true,
+        autoplay: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
                 }
-            ]
-        });
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 });

@@ -1,6 +1,5 @@
-ul {
-    list-style-type: none;
-    padding: 0;
+.wrapper {
+    position: relative;
 }
 
 .section_one {
@@ -97,7 +96,6 @@ ul {
     height: 100%;
     outline: none;
     padding: 0.2em 0.7em;
-    border: 0;
 }
 
 .section_two .container .row .col-lg-5 form input::placeholder {
@@ -113,7 +111,6 @@ ul {
     font-size: 12px;
     padding: 0em 1em;
     cursor: pointer;
-    margin: 0;
 }
 
 .section_two .container .row .col-lg-5 form p span {
@@ -371,7 +368,6 @@ ul {
         font-size: 16px;
     }
     .section_two .container .row .col-lg-4 a section {
-        display: grid;
         grid-template-columns: 40% 60%;
     }
     .section_two .container .row .col-lg-5 .category_list {
@@ -410,7 +406,6 @@ ul {
         top: 3em;
     }
     .section_two .container .row .col-lg-3 span .section_two .container .row .col-lg-5 form {
-        display: grid;
         grid-template-columns: 90% 10%;
         margin-top: 1em;
         margin-bottom: 1em;

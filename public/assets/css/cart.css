@@ -138,6 +138,278 @@
 }
 
 .cart_container .container .order-details section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.2em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.cart_container .container .order-details section .grid span:last-child {
+    text-align: end;
+    font-weight: 600;
+}
+
+.cart_container .container .order-details form section .grid input {
+    background: white;
+    padding: 0.3em;
+    border: 1px solid lightgray;
+    border-radius: 0.15em;
+    outline: none;
+}
+
+.cart_container .container .order-details form section button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    font-weight: 600;
+    font-family: 'Work Sans';
+    background: #fb8b24;
+    color: white;
+    margin-top: 3.5em;
+}
+
+.cart_container .container .order-details .col-lg-4 a {
+    display: block;
+    width: 66%;
+    text-align: center;
+    margin: 0.5em 4em;
+    padding: 0.5em;
+    font-family: 'Roboto';
+    background: #e2e2e2;
+}
+
+.cart_container .container .order-details .col-lg-4 a:hover {
+    text-decoration: none;
+    color: black;
+    background: #969696;
+}
+
+@media screen and ( max-width:768px) {
+    .cart_container .container .item_description {
+        display: none;
+    }
+    .cart_container .container .item_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    .cart_container .container .rounded .item .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cart_container .container .rounded .item img {
+        height: 15em;
+        width: 12em;
+        margin-bottom: 1em;
+    }
+    .cart_container .container .rounded .item .tablet_price_wrapper {
+        display: block;
+    }
+    .cart_container .container .rounded .item .seller {
+        display: none;
+    }
+    .cart_container .container .rounded .item .col-lg-2 {
+        display: none;
+    }
+    .cart_container .container .rounded .item .tablet {
+        display: block;
+    }
+    .cart_container .container .rounded .item .tablet form {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin-top: 0.75em;
+        position: relative;
+    }
+    .cart_container .container .rounded .item .tablet form input {
+        display: inline-block;
+        width: 80%;
+        outline: none;
+        border: 1px solid lightgray;
+        font-family: 'Roboto';
+        border-radius: 0.25em;
+        padding: 0.2em 3.5em 0.2em 0.4em;
+    }
+    .cart_container .container .rounded .item .tablet form button[type=button] {
+        user-select: none;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        cursor: pointer;
+        width: 1.5em;
+        height: 1.5em;
+        background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+        border-radius: 30px;
+        border: 1px solid #8F9092;
+        transition: all 0.2s ease;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #606060;
+        text-shadow: 0 1px #fff;
+        position: absolute;
+        top: 0.4em;
+    }
+    .cart_container .container .rounded .item .tablet form button.btn-reduce {
+        left: 7.3em;
+    }
+    .cart_container .container .rounded .item .tablet form button.btn-increase {
+        left: 9.3em;
+    }
+    .cart_container .container .rounded .item .tablet form button::-moz-focus-inner {
+        border: 0;
+    }
+    .cart_container .container .order-details .col-lg-4 a {
+        margin: 0.65em 0.5em;
+        width: calc(100% - 1em);
+    }
+}
+
+@media screen and (max-width:425px) {
+    .cart_container .container .item_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.cart_container {
+    background-color: #f0f0f036;
+    min-height: 35em;
+}
+
+.cart_container .container .title {
+    font-size: 2em;
+    font-family: 'Scheherazade New', serif;
+    margin-top: 0.3em;
+    margin-bottom: 1.25em;
+}
+
+.cart_container .container .row .col-lg-12 section img {
+    margin: auto;
+}
+
+.cart_container .container .row .col-lg-12 section h4 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #bcbcbc;
+    margin: 1em 0em;
+    font-family: 'Scheherazade New';
+}
+
+.cart_container .container .row .col-lg-12 section p {
+    font-size: 24px;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .row .col-lg-12 section a {
+    display: block;
+    margin: 1em auto;
+    width: 10em;
+    text-align: center;
+    padding: 0.75em 0.5em;
+    background: #e6bb00;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .item_description {
+    color: #949494;
+}
+
+.cart_container .container .rounded {
+    background: white;
+    margin: 0.5em 0em;
+    margin-bottom: 0.75em;
+}
+
+.cart_container .container .rounded .item .col-lg-6,
+.cart_container .container .rounded .item .col-lg-2 {
+    padding: 0.75rem;
+}
+
+.cart_container .container .rounded .item .col-lg-2 {
+    border-left: 1px solid rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+}
+
+.cart_container .container .rounded .item .col-lg-6 {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.cart_container .container .rounded .item img {
+    height: 5em;
+    width: 5em;
+}
+
+.cart_container .container .rounded .item .seller {
+    color: #808080b5;
+}
+
+.cart_container .container .rounded .item .name {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: chocolate;
+    display: block;
+    margin: 0.35em 0em;
+}
+
+.cart_container .container .rounded .item .tablet_price_wrapper {
+    display: none;
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: #047004;
+}
+
+.cart_container .container .rounded .item .name:hover {
+    text-decoration: none;
+    color: chocolate;
+}
+
+.cart_container .container .rounded .item .tablet {
+    display: none;
+}
+
+.cart_container .container .rounded .item .details .flex form {
+    color: rgb(255 133 7);
+}
+
+.cart_container .container .rounded .item .details .flex form:first-child {
+    margin-right: 2em;
+}
+
+.cart_container .container .rounded .item .col-lg-2 select {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    font-family: 'Roboto';
+}
+
+.cart_container .container .rounded .item .col-lg-2 .price_wrapper,
+.cart_container .container .rounded .item .col-lg-2 .price_sum_wrapper {
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: #047004;
+}
+
+.cart_container .container .order-details h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 0.75em;
+}
+
+.cart_container .container .order-details section {
+    padding: 1.5em 0.5em 0em;
+}
+
+.cart_container .container .order-details section.prices {
+    border: 1px solid #d6d6d6;
+    border-right: 0;
+    border-left: 0;
+}
+
+.cart_container .container .order-details section .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 1.2em;

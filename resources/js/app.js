@@ -20,7 +20,10 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('client-chat-component', require('./components/ClientChatComponent.vue').default);
+Vue.component('client-chat-component', require('./components/clients/ClientChatComponent.vue').default);
+Vue.component('name-component', require('./components/clients/NameComponent.vue').default);
+Vue.component('massages-component', require('./components/clients/MessagesComponent.vue').default);
+Vue.component('form-component', require('./components/clients/FormComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
