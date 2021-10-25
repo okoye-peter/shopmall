@@ -9,5 +9,8 @@ export default {
 </script>
 
 <style>
-
+.massage_wrapper{
+  height:18rem;
+  background: white;
+}
 </style>

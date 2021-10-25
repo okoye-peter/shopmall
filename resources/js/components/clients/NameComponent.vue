@@ -1,6 +1,6 @@
 <template>
     <div class="admin_name_wrapper">
-        <button class="close">
+        <button class="close" @click="emitEvent">
             <i class="fas fa-times"></i>
         </button>
         <div class="d-flex">
@@ -17,8 +17,16 @@ export default {
             required: true,
             type: String
         }
+    },
+    emits:['hideChatComponent'],
+    methods:{
+        emitEvent(){
+            console.log('clicked');
+            this.$emit('hideChatComponent')
+        }
     }
 };
+
 </script>
 
 <style>
@@ -49,7 +57,8 @@ export default {
     background: hsl(194deg 71% 26%);
 }
 .admin_name_wrapper .d-flex img {
-    height: 3em;
+
+height: 3em;
     width: 3em;
     border-radius: 50%;
     margin-right: 1.5em;
