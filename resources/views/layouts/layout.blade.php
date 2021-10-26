@@ -28,6 +28,7 @@
         <x-navigation></x-navigation>
             @yield('content')
         <x-footer />
+        <client-chat-component source={{asset('assets/images/karsten-winegeart-KSqfFHtHpro-unsplash.jpg')}}></client-chat-component>
     </div>    
 
     @livewireScripts
@@ -38,7 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
     <!-- font awesome -->
     <script src="{{ asset('assets/js/all.min.js') }}"></script>
-    <script src="{{ asset('assets/js/navigation.js') }}"></script>
+    <script src="{{ asset('assets/js/navigation.js') }}" async></script>
     
      @if (session()->has('success'))
         <script>

@@ -164,7 +164,7 @@
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-12 col-12">
                             <a class="item" href="#">
-                                <img src="{{ asset('assets/images/jakob-owens-WzncgWs3RJ4-unsplash.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/gustavo-espindola-qpmtL7N6J-E-unsplash.jpg') }}" alt="">
                                 <p class="item_name">Palm BW- Classy Brown White Male Slippers</p>
                                 <p class="item_price">$ <span>10.99</span></p>
                                 <p class="ratings">

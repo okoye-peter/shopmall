@@ -1,11 +1,14 @@
 <template>
     <div class="chats_wrapper">
-        <div class="chats_container shadow" @hideChatComponent="hideChat($event)">
-            <name-component :source="source"></name-component>
+        <div class="chats_container shadow" ref="chatBox">
+            <name-component
+                :source="source"
+                v-on:hide-chat-component="hideChat"
+            ></name-component>
             <massages-component></massages-component>
             <form-component></form-component>
         </div>
-        <aside @click.self="loadChatComponent">
+        <aside @click.self="loadChatComponent" v-show="!showChat">
             <i class="far fa-comment-alt"></i>
         </aside>
     </div>
@@ -19,85 +22,55 @@ export default {
             type: String
         }
     },
+    data() {
+        return {
+            showChat: false
+        };
+    },
     mounted() {
         console.log("Component mounted.");
     },
     methods: {
-        loadChatComponent($event) {
-            $event.target.classList.add("fadeEffect");
-            document.querySelector(".chats_container").classList.add("show");
-            $event.target.addEventListener(
-                "animationend",
-                function() {
-                    this.classList.add("hide");
-                },
-                false
-            );
+        loadChatComponent() {
+            this.showChat = true;
+            this.$refs.chatBox.classList.add("active");
         },
-        hideChat($event){
-          // console
-          console.log($event.target)
+        hideChat() {
+            this.showChat = false;
+            this.$refs.chatBox.classList.remove("active");
         }
-
     }
 };
 </script>
 
 <style>
-  .chats_wrapper {
-      display: inline-block;
-      position: fixed;
-      z-index: 10000;
-      bottom: 2em;
-      right: 1em;
-  }
-  .chats_wrapper .chats_container {
-      width: 18em;
-      border-radius: 0.3em;
-      position: relative;
-      bottom: -27.2em;
-      transition: all ease-out 0.75s;
-      opacity: 0;
-  }
-  .chats_wrapper .chats_container.show {
-      opacity: 1;
-      bottom: -1.7em;
-  }
-  .chats_wrapper > aside {
-      padding: 0.85em;
-      background: #e15613f0;
-      border-radius: 50%;
-      color: white;
-      height: 3em;
-      width: 3em;
-      margin-left: auto;
-      text-align: center;
-      cursor: pointer;
-  }
-  .chats_wrapper > aside.fadeEffect {
-      animation-name: fadeOut;
-      animation-duration: 1s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-  }
+.chats_wrapper {
+    display: inline-block;
+    position: fixed;
+    z-index: 10000;
+    bottom: 2em;
+    right: 1em;
+}
+.chats_wrapper .chats_container {
+    width: 18em;
+    border-radius: 0.3em;
+    transform-origin: bottom right;
+    transition: all ease 0.5s;
+    transform: scale(0);
+}
+.chats_wrapper .chats_container.active {
+    transform: scale(1);
+}
 
-  .chats_wrapper > aside.hide {
-      display: none;
-  }
-
-  @keyframes fadeOut {
-      0% {
-          opacity: 0.75;
-      }
-      25% {
-          opacity: 0.5;
-      }
-      50% {
-          opacity: 0.25;
-      }
-      100% {
-          opacity: 0;
-          visibility: hidden;
-      }
-  }
+.chats_wrapper > aside {
+    padding: 0.85em;
+    background: #e15613f0;
+    border-radius: 50%;
+    color: white;
+    height: 3em;
+    width: 3em;
+    margin-left: auto;
+    text-align: center;
+    cursor: pointer;
+}
 </style>

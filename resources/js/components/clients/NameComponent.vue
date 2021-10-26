@@ -1,6 +1,6 @@
 <template>
     <div class="admin_name_wrapper">
-        <button class="close" @click="emitEvent">
+        <button class="close" @click="$emit('hide-chat-component')">
             <i class="fas fa-times"></i>
         </button>
         <div class="d-flex">
@@ -18,11 +18,11 @@ export default {
             type: String
         }
     },
-    emits:['hideChatComponent'],
+    emits:['hide-chat-component'],
     methods:{
         emitEvent(){
+            this.$emit('hide-chat-component')
             console.log('clicked');
-            this.$emit('hideChatComponent')
         }
     }
 };

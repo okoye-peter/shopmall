@@ -7,7 +7,6 @@ function toggle_Vlaue(link) {
 
 let langLink = document.querySelector('.drop-toggle').querySelectorAll('a');
 let currencyLink = document.querySelector('.drop-currency-toggle').querySelectorAll('a');
-
 langLink.forEach(link => {
     link.addEventListener('click', function() {
         toggle_Vlaue(link);

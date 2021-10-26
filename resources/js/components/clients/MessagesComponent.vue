@@ -1,5 +1,7 @@
 <template>
-  <div class="massage_wrapper"></div>
+  <div class="massage_wrapper">
+    
+  </div>
 </template>
 
 <script>

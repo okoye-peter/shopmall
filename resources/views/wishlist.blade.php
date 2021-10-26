@@ -34,7 +34,6 @@
                     
             @endforelse --}}
         </div>
-        <client-chat-component source={{asset('assets/images/karsten-winegeart-KSqfFHtHpro-unsplash.jpg')}}></client-chat-component>
     </div>
 @endsection
 @push('script')

@@ -2,7 +2,8 @@
     <div class="form_wrapper">
         <form action="" method="post">
             <textarea name="" id=""></textarea>
-            <button class="add_file">
+            <input type="file" name="" ref="file">
+            <button class="add_file" @click.prevent="loadFile">
                 <i class="fas fa-paperclip"></i>
             </button>
             <button class="send_message">
@@ -13,7 +14,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data(){
+        return{
+            src:""
+        }
+    },
+    methods:{
+        loadFile(){
+            this.$refs.file.click()
+        }
+    }
+};
 </script>
 
 <style>
@@ -23,6 +35,9 @@ export default {};
 }
 .form_wrapper form {
     position: relative;
+}
+.form_wrapper form input[type="file"]{
+    display: none;
 }
 .form_wrapper form textarea {
     width: calc(100% - 0.6em);

@@ -1846,6 +1846,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     source: {
@@ -1853,20 +1856,22 @@ __webpack_require__.r(__webpack_exports__);
       type: String
     }
   },
+  data: function data() {
+    return {
+      showChat: false
+    };
+  },
   mounted: function mounted() {
     console.log("Component mounted.");
   },
   methods: {
-    loadChatComponent: function loadChatComponent($event) {
-      $event.target.classList.add("fadeEffect");
-      document.querySelector(".chats_container").classList.add("show");
-      $event.target.addEventListener("animationend", function () {
-        this.classList.add("hide");
-      }, false);
+    loadChatComponent: function loadChatComponent() {
+      this.showChat = true;
+      this.$refs.chatBox.classList.add("active");
     },
-    hideChat: function hideChat($event) {
-      // console
-      console.log($event.target);
+    hideChat: function hideChat() {
+      this.showChat = false;
+      this.$refs.chatBox.classList.remove("active");
     }
   }
 });
@@ -1898,7 +1903,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      src: ""
+    };
+  },
+  methods: {
+    loadFile: function loadFile() {
+      this.$refs.file.click();
+    }
+  }
+});
 
 /***/ }),
 
@@ -1913,6 +1930,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -1951,11 +1970,11 @@ __webpack_require__.r(__webpack_exports__);
       type: String
     }
   },
-  emits: ['hideChatComponent'],
+  emits: ['hide-chat-component'],
   methods: {
     emitEvent: function emitEvent() {
+      this.$emit('hide-chat-component');
       console.log('clicked');
-      this.$emit('hideChatComponent');
     }
   }
 });
@@ -6509,7 +6528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.chats_wrapper {\n    display: inline-block;\n    position: fixed;\n    z-index: 10000;\n    bottom: 2em;\n    right: 1em;\n}\n.chats_wrapper .chats_container {\n    width: 18em;\n    border-radius: 0.3em;\n    position: relative;\n    bottom: -27.2em;\n    transition: all ease-out 0.75s;\n    opacity: 0;\n}\n.chats_wrapper .chats_container.show {\n    opacity: 1;\n    bottom: -1.7em;\n}\n.chats_wrapper > aside {\n    padding: 0.85em;\n    background: #e15613f0;\n    border-radius: 50%;\n    color: white;\n    height: 3em;\n    width: 3em;\n    margin-left: auto;\n    text-align: center;\n    cursor: pointer;\n}\n.chats_wrapper > aside.fadeEffect {\n    -webkit-animation-name: fadeOut;\n            animation-name: fadeOut;\n    -webkit-animation-duration: 1s;\n            animation-duration: 1s;\n    -webkit-animation-timing-function: ease;\n            animation-timing-function: ease;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n}\n.chats_wrapper > aside.hide {\n    display: none;\n}\n@-webkit-keyframes fadeOut {\n0% {\n        opacity: 0.75;\n}\n25% {\n        opacity: 0.5;\n}\n50% {\n        opacity: 0.25;\n}\n100% {\n        opacity: 0;\n        visibility: hidden;\n}\n}\n@keyframes fadeOut {\n0% {\n        opacity: 0.75;\n}\n25% {\n        opacity: 0.5;\n}\n50% {\n        opacity: 0.25;\n}\n100% {\n        opacity: 0;\n        visibility: hidden;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.chats_wrapper {\r\n    display: inline-block;\r\n    position: fixed;\r\n    z-index: 10000;\r\n    bottom: 2em;\r\n    right: 1em;\n}\n.chats_wrapper .chats_container {\r\n    width: 18em;\r\n    border-radius: 0.3em;\r\n    transform-origin: bottom right;\r\n    transition: all ease 0.5s;\r\n    transform: scale(0);\n}\n.chats_wrapper .chats_container.active {\r\n    transform: scale(1);\n}\n.chats_wrapper > aside {\r\n    padding: 0.85em;\r\n    background: #e15613f0;\r\n    border-radius: 50%;\r\n    color: white;\r\n    height: 3em;\r\n    width: 3em;\r\n    margin-left: auto;\r\n    text-align: center;\r\n    cursor: pointer;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6533,7 +6552,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.form_wrapper {\r\n    background: white;\r\n    border-radius: 0em 0em 0.3em 0.3em;\n}\n.form_wrapper form {\r\n    position: relative;\n}\n.form_wrapper form textarea {\r\n    width: calc(100% - 0.6em);\r\n    margin: 0.3em;\r\n    height: 2.5em;\r\n    resize: none;\r\n    border: 1px solid lightgray;\r\n    border-radius: 0.3em;\r\n    outline: none;\r\n    padding: 0.3em 4em 0.3em 0.3em;\r\n    margin-bottom: 0;\r\n    font-size: 12px;\n}\n.form_wrapper form textarea:focus {\r\n    border-color: #1c83a2;\n}\n.form_wrapper form button {\r\n    top: 0.2em;\r\n    position: absolute;\r\n    font-size: 1.1rem;\r\n    color: #808080c2;\n}\n.form_wrapper form button.add_file {\r\n    right: 2.5em;\n}\n.form_wrapper form button.send_message {\r\n    right: 1.2em;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.form_wrapper {\r\n    background: white;\r\n    border-radius: 0em 0em 0.3em 0.3em;\n}\n.form_wrapper form {\r\n    position: relative;\n}\n.form_wrapper form input[type=\"file\"]{\r\n    display: none;\n}\n.form_wrapper form textarea {\r\n    width: calc(100% - 0.6em);\r\n    margin: 0.3em;\r\n    height: 2.5em;\r\n    resize: none;\r\n    border: 1px solid lightgray;\r\n    border-radius: 0.3em;\r\n    outline: none;\r\n    padding: 0.3em 4em 0.3em 0.3em;\r\n    margin-bottom: 0;\r\n    font-size: 12px;\n}\n.form_wrapper form textarea:focus {\r\n    border-color: #1c83a2;\n}\n.form_wrapper form button {\r\n    top: 0.2em;\r\n    position: absolute;\r\n    font-size: 1.1rem;\r\n    color: #808080c2;\n}\n.form_wrapper form button.add_file {\r\n    right: 2.5em;\n}\n.form_wrapper form button.send_message {\r\n    right: 1.2em;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -44452,16 +44471,12 @@ var render = function() {
   return _c("div", { staticClass: "chats_wrapper" }, [
     _c(
       "div",
-      {
-        staticClass: "chats_container shadow",
-        on: {
-          hideChatComponent: function($event) {
-            return _vm.hideChat($event)
-          }
-        }
-      },
+      { ref: "chatBox", staticClass: "chats_container shadow" },
       [
-        _c("name-component", { attrs: { source: _vm.source } }),
+        _c("name-component", {
+          attrs: { source: _vm.source },
+          on: { "hide-chat-component": _vm.hideChat }
+        }),
         _vm._v(" "),
         _c("massages-component"),
         _vm._v(" "),
@@ -44473,6 +44488,14 @@ var render = function() {
     _c(
       "aside",
       {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: !_vm.showChat,
+            expression: "!showChat"
+          }
+        ],
         on: {
           click: function($event) {
             if ($event.target !== $event.currentTarget) {
@@ -44509,25 +44532,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "form_wrapper" }, [
+    _c("form", { attrs: { action: "", method: "post" } }, [
+      _c("textarea", { attrs: { name: "", id: "" } }),
+      _vm._v(" "),
+      _c("input", { ref: "file", attrs: { type: "file", name: "" } }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "add_file",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.loadFile.apply(null, arguments)
+            }
+          }
+        },
+        [_c("i", { staticClass: "fas fa-paperclip" })]
+      ),
+      _vm._v(" "),
+      _vm._m(0)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form_wrapper" }, [
-      _c("form", { attrs: { action: "", method: "post" } }, [
-        _c("textarea", { attrs: { name: "", id: "" } }),
-        _vm._v(" "),
-        _c("button", { staticClass: "add_file" }, [
-          _c("i", { staticClass: "fas fa-paperclip" })
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "send_message" }, [
-          _c("i", { staticClass: "fas fa-paper-plane" })
-        ])
-      ])
+    return _c("button", { staticClass: "send_message" }, [
+      _c("i", { staticClass: "fas fa-paper-plane" })
     ])
   }
 ]
@@ -44579,9 +44614,18 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "admin_name_wrapper" }, [
-    _c("button", { staticClass: "close", on: { click: _vm.emitEvent } }, [
-      _c("i", { staticClass: "fas fa-times" })
-    ]),
+    _c(
+      "button",
+      {
+        staticClass: "close",
+        on: {
+          click: function($event) {
+            return _vm.$emit("hide-chat-component")
+          }
+        }
+      },
+      [_c("i", { staticClass: "fas fa-times" })]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "d-flex" }, [
       _c("img", { attrs: { src: _vm.source, alt: "" } }),
