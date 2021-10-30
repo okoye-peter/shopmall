@@ -1,6 +1,6 @@
 <template>
     <div class="chats_wrapper">
-        <div class="chats_container shadow" ref="chatBox">
+        <div class="chats_container shadow" ref="chatBox" v-show="showChat">
             <name-component
                 :source="source"
                 v-on:hide-chat-component="hideChat"
@@ -33,11 +33,15 @@ export default {
     methods: {
         loadChatComponent() {
             this.showChat = true;
-            this.$refs.chatBox.classList.add("active");
+            setTimeout(()=>{
+                this.$refs.chatBox.classList.add("active");
+            },350)
         },
         hideChat() {
-            this.showChat = false;
             this.$refs.chatBox.classList.remove("active");
+            setTimeout(() => {
+                this.showChat = false;
+            },600)
         }
     }
 };

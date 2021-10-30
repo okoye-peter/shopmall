@@ -1866,12 +1866,20 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     loadChatComponent: function loadChatComponent() {
+      var _this = this;
+
       this.showChat = true;
-      this.$refs.chatBox.classList.add("active");
+      setTimeout(function () {
+        _this.$refs.chatBox.classList.add("active");
+      }, 350);
     },
     hideChat: function hideChat() {
-      this.showChat = false;
+      var _this2 = this;
+
       this.$refs.chatBox.classList.remove("active");
+      setTimeout(function () {
+        _this2.showChat = false;
+      }, 600);
     }
   }
 });
@@ -1930,6 +1938,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6576,7 +6671,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.massage_wrapper{\r\n  height:18rem;\r\n  background: white;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.massage_wrapper {\r\n    height: 18rem;\r\n    background: white;\r\n    overflow-y: auto;\r\n    padding: 10px;\r\n    background: #ebebeb;\n}\n.massage_wrapper ul li{\r\n    width: calc(100% - 11px);\n}\n.massage_wrapper ul li div .avatar{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25%;\r\n    float: left;\r\n    padding-right: 10px;\n}\n.massage_wrapper ul li div .avatar .img-circle{\r\n  border-radius: 50%;\n}\n.msj {\r\n    float: left;\r\n    background: white;\n}\n.msj:before {\r\n    width: 0;\r\n    height: 0;\r\n    content: \"\";\r\n    top: -5px;\r\n    left: -14px;\r\n    position: relative;\r\n    border-style: solid;\r\n    border-width: 0 13px 13px 0;\r\n    border-color: transparent #ffffff transparent transparent;\n}\n.text {\r\n      width: 75%;\r\n      display: flex;\r\n      flex-direction: column;\n}\n.text-l {\r\n    float: left;\r\n    padding-right: 10px;\n}\n.text > p:first-of-type {\r\n    width: 100%;\r\n    margin-top: 0;\r\n    margin-bottom: auto;\r\n    line-height: 13px;\r\n    font-size: 12px;\n}\n.text > p:last-of-type {\r\n    width: 100%;\r\n    text-align: right;\r\n    color: silver;\r\n    margin-bottom: -7px;\r\n    margin-top: auto;\n}\n.msj-rta {\r\n    float: right;\r\n    background: whitesmoke;\n}\n.macro {\r\n    margin-top: 5px;\r\n    width: 85%;\r\n    border-radius: 5px;\r\n    padding: 5px;\r\n    display: flex;\n}\n.text-r {\r\n    float: right;\r\n    padding-left: 10px;\n}\n.massage_wrapper ul li div.msj-rta .avatar{\r\n  padding:0px 0px 0px 10px;\n}\n.msj-rta:after {\r\n    width: 0;\r\n    height: 0;\r\n    content: \"\";\r\n    top: -5px;\r\n    left: 14px;\r\n    position: relative;\r\n    border-style: solid;\r\n    border-width: 13px 13px 0 0;\r\n    border-color: whitesmoke transparent transparent transparent;\n}\r\n\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -44471,7 +44566,18 @@ var render = function() {
   return _c("div", { staticClass: "chats_wrapper" }, [
     _c(
       "div",
-      { ref: "chatBox", staticClass: "chats_container shadow" },
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.showChat,
+            expression: "showChat"
+          }
+        ],
+        ref: "chatBox",
+        staticClass: "chats_container shadow"
+      },
       [
         _c("name-component", {
           attrs: { source: _vm.source },
@@ -44588,9 +44694,142 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "massage_wrapper" })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "massage_wrapper" }, [
+      _c("ul", [
+        _c("li", [
+          _c("div", { staticClass: "msj macro" }, [
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text text-l" }, [
+              _c("p", [_vm._v("Hello Tom...")]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("div", { staticClass: "msj-rta macro" }, [
+            _c("div", { staticClass: "text text-r" }, [
+              _c("p", [_vm._v("Hi, Pablo")]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg"
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("div", { staticClass: "msj macro" }, [
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text text-l" }, [
+              _c("p", [_vm._v("What would you like to talk about today?")]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("div", { staticClass: "msj-rta macro" }, [
+            _c("div", { staticClass: "text text-r" }, [
+              _c("p", [_vm._v("Tell me a joke")]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg"
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("div", { staticClass: "msj macro" }, [
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text text-l" }, [
+              _c("p", [
+                _vm._v(
+                  "\n                        Spaceman: Computer! Computer! Do we bring battery?!\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("div", { staticClass: "msj-rta macro" }, [
+            _c("div", { staticClass: "text text-r" }, [
+              _c("p", [_vm._v("LOL")]),
+              _vm._v(" "),
+              _c("p", [_c("small", [_vm._v("10:14 AM")])])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "avatar" }, [
+              _c("img", {
+                staticClass: "img-circle",
+                attrs: {
+                  src:
+                    "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg"
+                }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
