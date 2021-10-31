@@ -27,8 +27,14 @@ Route::middleware('auth')->get('/cart',function(){
 Route::view('/wishlist','wishlist');
 Route::view('/cart','cart');
 Route::view('/shop','shop');
-Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
+Route::view('/shop/{product}','product')->where(['product'=>"[0-9]+"]);
 Route::view('/admin/dashboard','admin.dashboard');
+Route::view('/admin/profile','admin.profile');
+Route::view('/admin/transactions','admin.transactions');
+Route::view('/admin/users','admin.users');
+Route::view('/admin/mails','admin.emails.inbox');
+Route::view('/admin/mails/create','admin.emails.compose');
+Route::view('/admin/mails/{mail}','admin.emails.read')->where(['mail' => "[0-9]+"]);
 
 // Route::get('/email/verify', function () {
 //     return view('auth.verify-email');

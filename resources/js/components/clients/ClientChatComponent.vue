@@ -35,7 +35,7 @@ export default {
             this.showChat = true;
             setTimeout(()=>{
                 this.$refs.chatBox.classList.add("active");
-            },350)
+            },20)
         },
         hideChat() {
             this.$refs.chatBox.classList.remove("active");

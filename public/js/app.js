@@ -1871,7 +1871,7 @@ __webpack_require__.r(__webpack_exports__);
       this.showChat = true;
       setTimeout(function () {
         _this.$refs.chatBox.classList.add("active");
-      }, 350);
+      }, 20);
     },
     hideChat: function hideChat() {
       var _this2 = this;
