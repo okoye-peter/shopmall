@@ -104,20 +104,21 @@ export default {};
     background: #ebebeb;
 }
 
-.massage_wrapper ul li{
+.massage_wrapper ul li {
     width: calc(100% - 11px);
 }
-.massage_wrapper ul li div .avatar{
+.massage_wrapper ul li div .avatar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
     float: left;
     padding-right: 10px;
-
 }
-.massage_wrapper ul li div .avatar .img-circle{
-  border-radius: 50%;
+.massage_wrapper ul li div .avatar .img-circle {
+    border-radius: 50%;
+    height: 2.3em;
+    width: 2.3em;
 }
 .msj {
     float: left;
@@ -136,11 +137,11 @@ export default {};
     border-color: transparent #ffffff transparent transparent;
 }
 
-  .text {
-      width: 75%;
-      display: flex;
-      flex-direction: column;
-  }
+.text {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
 .text-l {
     float: left;
     padding-right: 10px;
@@ -174,8 +175,8 @@ export default {};
     float: right;
     padding-left: 10px;
 }
-.massage_wrapper ul li div.msj-rta .avatar{
-  padding:0px 0px 0px 10px;
+.massage_wrapper ul li div.msj-rta .avatar {
+    padding: 0px 0px 0px 10px;
 }
 .msj-rta:after {
     width: 0;
@@ -188,7 +189,4 @@ export default {};
     border-width: 13px 13px 0 0;
     border-color: whitesmoke transparent transparent transparent;
 }
-
-
-
 </style>

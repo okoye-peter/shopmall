@@ -28,6 +28,7 @@ Route::view('/wishlist','wishlist');
 Route::view('/cart','cart');
 Route::view('/shop','shop');
 Route::view('/shop/{id}','product')->where(['id'=>"[0-9]+"]);
+Route::view('/admin/dashboard','admin.dashboard');
 
 // Route::get('/email/verify', function () {
 //     return view('auth.verify-email');
