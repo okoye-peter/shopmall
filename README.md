@@ -1,6 +1,6 @@
 <p>This is an e-commerce site with admin panel built with <b>Laravel, Vue js, pusher, websocket</p>
 <p>To get it up and running follow the following step</p>
-<ul>
+<ul style="font-size:16px;">
     <li>clone the repository with<br> <pre><code>git clone https://github.com/okoye-peter/shopmall.git<code></pre></li>
     <li>Install all dependency with<br> <pre><code>composer install<code></pre> in your console</li>
     <li>Then run<br> <pre><code>npm install<code></pre> in your console</li>
