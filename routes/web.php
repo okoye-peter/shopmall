@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\EmailVerificationController;
 use App\Http\Controllers\GoogleAuthenticationController;
@@ -32,6 +33,8 @@ Route::view('/admin/dashboard','admin.dashboard');
 Route::view('/admin/profile','admin.profile');
 Route::view('/admin/transactions','admin.transactions');
 Route::view('/admin/users','admin.users');
+Route::view('/admin/products','admin.products');
+Route::view('/admin/coupons','admin.coupons');
 Route::view('/admin/mails','admin.emails.inbox');
 Route::view('/admin/mails/create','admin.emails.compose');
 Route::view('/admin/mails/{mail}','admin.emails.read')->where(['mail' => "[0-9]+"]);
@@ -52,6 +55,13 @@ Route::group(['middleware' => 'auth'], function(){
     // chats routes
     Route::get('messages', [ChatsController::class, 'fetchMessages']);
     Route::post('messages', [ChatsController::class, 'sendMessage']);
+});
+
+Route::group(['middleware' => ['auth', 'isadmin']], function(){
+    Route::group(['prefix' => '/files'],function(){
+        Route::post('images/store/multiple', [FileController::class, 'storeMultipleFiles'])->name('files.store');
+        Route::post('images/delete', [FileController::class, 'deleteFiles'])->name('files.delete');
+    });
 });
 
 Route::any("*",function(){

@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
 @endpush
 @section('content')
-    <div class="form_wrapper">
+    <div class="form_container">
         <div class="container">
             <div class="shadow rounded">
                 <div class="row">
@@ -96,12 +96,12 @@
                                     {{ __('Already registered?') }}
                                 </a>
                             </div>  
-                            <x-jet-button class="d-block">
-                                {{ __('Register') }}
-                            </x-jet-button>
                             <a href="{{ route('google.register') }}" class="google">
                                 <img src="{{ asset('assets/images/google.png') }}" alt="" class="mr-3">sign-in with google
                             </a>
+                            <x-jet-button class="d-block">
+                                {{ __('Register') }}
+                            </x-jet-button>
                         </form>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">

@@ -8,6 +8,7 @@
     <li>set up your google authentication credentials, if you don't have one create your through the link <a href="https://console.developers. google.com">console.developers. google.com</a></li>
     <li>run in your console <br/><pre><code>npm run dev</code></pre></li>
     <li>set up your database credentials</li>
+    <li>set up your pusher credentials</li>
     <li>migrate your database <br/><pre><code>php artisan migrate</code></pre></li>
     <li>start the serve <br/><pre><code>php artisan serve</code></pre></li>
     <li>go to your browser and enter the url http://127.0.0.1:8000</li>

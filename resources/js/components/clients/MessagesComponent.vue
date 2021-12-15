@@ -104,6 +104,19 @@ export default {};
     background: #ebebeb;
 }
 
+.massage_wrapper::-webkit-scrollbar{
+    width: 8px;
+}
+
+.massage_wrapper::-webkit-scrollbar-track{
+    background: hsl(194deg 71% 80%);
+}
+
+.massage_wrapper::-webkit-scrollbar-thumb {
+  background: hsl(194deg 71% 65%); 
+  border-radius:0.5em;
+}
+
 .massage_wrapper ul li {
     width: calc(100% - 11px);
 }
