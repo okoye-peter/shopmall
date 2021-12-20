@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('title', 'Shop')
 @push('styles')
+{{-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/shop.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
 @endpush
@@ -46,9 +47,9 @@
                         </ul>
                     </article>
                     <div class="price_section">
-                        <h2>Price Range</h2>
-                        <div class="slider-range-wrap">
-                            <div id="slider-range"></div>
+                        <h2 class="mt-4">Price Range</h2>
+                        <div class="slider-range-wrap mb-12">
+                             <div id="slider-range" class="range-bar"></div>
                             <span class="min-range">100</span>
                             <span class="max-range">1,000</span>
                         </div>
@@ -116,142 +117,36 @@
                         </div>
                     </div>
                     <div class="row p-3">
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <a class="item" href="#">
-                                <img src="{{ asset('assets/images/arno-senoner-HFE2RyC76tw-unsplash.jpg') }}" alt="">
-                                <p class="item_name">Oraimo COMPACT 10000mAh Ultra Slim Power Fast Charging Bank</p>
-                                <p class="item_price">$ <span>13.99</span></p>
-                                <p class="ratings">
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                </p>
-                                <form action="" method="post">
-                                    @csrf
-                                    <button type="submit">Add To Cart</button>
-                                </form>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <a class="item" href="#">
-                                <img src="{{ asset('assets/images/allec-gomes-GVilRey5_yU-unsplash.jpg') }}" alt="">
-                                <p class="item_name">Luxury Black Full Metal Digital Lava Wrist Watch- Unisex</p>
-                                <p class="item_price">$ <span>9.99</span></p>
-                                <p class="ratings">
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                </p>
-                                <form action="" method="post">
-                                    @csrf
-                                    <button type="submit">Add To Cart</button>
-                                </form>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <a class="item" href="#">
-                                <img src="{{ asset('assets/images/gustavo-espindola-qpmtL7N6J-E-unsplash.jpg') }}" alt="">
-                                <p class="item_name">Palm BW- Classy Brown White Male Slippers</p>
-                                <p class="item_price">$ <span>10.99</span></p>
-                                <p class="ratings">
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                </p>
-                                <form action="" method="post">
-                                    @csrf
-                                    <button type="submit">Add To Cart</button>
-                                </form>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <a class="item" href="#">
-                                <img src="{{ asset('assets/images/olive-ImEzF9B91Mk-unsplash.jpg') }}" alt="">
-                                <p class="item_name">Elegant Euramerican Water Drop Necklace Jewelry</p>
-                                <p class="item_price">$ <span>6.99</span></p>
-                                <p class="ratings">
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                </p>
-                                <form action="" method="post">
-                                    @csrf
-                                    <button type="submit">Add To Cart</button>
-                                </form>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-12">
-                            <a class="item" href="#">
-                                <img src="{{ asset('assets/images/revolt-164_6wVEHfI-unsplash.jpg') }}" alt="">
-                                <p class="item_name">Canvas MENS BRYCE OXFORD CANVAS</p>
-                                <p class="item_price">$ <span>12.99</span></p>
-                                <p class="ratings">
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                    <span class="half"></span>
-                                    <span class="full"></span>
-                                </p>
-                                <form action="" method="post">
-                                    @csrf
-                                    <button type="submit">Add To Cart</button>
-                                </form>
-                            </a>
-                        </div>
+                        @forelse ($products as $product)    
+                            <div class="col-lg-3 col-md-2 col-sm-12 col-12">
+                                <a class="item" href="{{ route('products.show',['product' =>$product->id]) }}">
+                                    <img src='{{ asset("$product->url") }}' alt="">
+                                    <p class="item_name">{{ $product->name }}</p>
+                                    <p class="item_price">$ <span>{{ $product->price }}</span></p>
+                                    <p class="ratings">
+                                        <span class="half"></span>
+                                        <span class="full"></span>
+                                        <span class="half"></span>
+                                        <span class="full"></span>
+                                        <span class="half"></span>
+                                        <span class="full"></span>
+                                        <span class="half"></span>
+                                        <span class="full"></span>
+                                        <span class="half"></span>
+                                        <span class="full"></span>
+                                    </p>
+                                    <form action="{{ route('carts.store', ['product' => $product->id]) }}" method="post">
+                                        @csrf
+                                        <button type="submit">Add To Cart</button>
+                                    </form>
+                                </a>
+                            </div>
+                        @empty
+                            
+                        @endforelse
+                        
                         <div class="row justify-content-center my-2">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            {{ $products->links('vendor.pagination.custom') }}
                         </div>
                     </div>
                 </div>
@@ -262,7 +157,8 @@
 @endsection
 
 @push('scripts')
-    <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js" async></script>
+    <script async>
         function numberWithCommas(x) {
             if (x !== null) {
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -273,48 +169,34 @@
             //slider range init set
             $( "#slider-range" ).slider({
                 range: true,
-                min: 100,
-                max: 1000,
-                values: [ 100, 1000 ],
+                min: 300,
+                max: 5000,
+                values: [ 340, 650 ],
                 slide: function( event, ui ) {
-                    $( "#min" ).html(numberWithCommas(ui.values[ 0 ]) );
-                    $( "#max" ).html(numberWithCommas(ui.values[ 1 ]) );
+                    $( ".min-range" ).html( "$" + ui.values[ 0 ]);
+                    $( ".max-range" ).html( "$" + ui.values[ 1 ]);
                 }
             });
-        
-            //slider range data tooltip set
-            var $handler = $("#slider-range .ui-slider-handle");
-        
-            $handler.eq(0).append("<b class='amount'><span id='min'>"+numberWithCommas($( "#slider-range" ).slider( "values", 0 )) +"</span></b>");
-            $handler.eq(1).append("<b class='amount'><span id='max'>"+numberWithCommas($( "#slider-range" ).slider( "values", 1 )) +"</span></b>");
 
-            //slider range pointer mousedown event
-            $handler.on("mousedown",function(e){
-                e.preventDefault();
-                $(this).children(".amount").fadeIn(300);
-            });
+            $( ".min-range" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ));
+            $( ".max-range" ).html( "$" + $( "#slider-range" ).slider( "values", 1 ));
 
-            //slider range pointer mouseup event
-            $handler.on("mouseup",function(e){
-                e.preventDefault();
-                $(this).children(".amount").fadeOut(300);
-            });
         });
 
         /*Dropdown Menu*/
         $('.dropdown').click(function () {
-                $(this).attr('tabindex', 1).focus();
-                $(this).toggleClass('active');
-                $(this).find('.dropdown-menu').slideToggle(300);
-            });
-            $('.dropdown').focusout(function () {
-                $(this).removeClass('active');
-                $(this).find('.dropdown-menu').slideUp(300);
-            });
-            $('.dropdown .dropdown-menu li').click(function () {
-                $(this).parents('.dropdown').find('span').text($(this).text());
-                $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-            });
+            $(this).attr('tabindex', 1).focus();
+            $(this).toggleClass('active');
+            $(this).find('.dropdown-menu').slideToggle(300);
+        });
+        $('.dropdown').focusout(function () {
+            $(this).removeClass('active');
+            $(this).find('.dropdown-menu').slideUp(300);
+        });
+        $('.dropdown .dropdown-menu li').click(function () {
+            $(this).parents('.dropdown').find('span').text($(this).text());
+            $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+        });
         /*End Dropdown Menu*/
 
 

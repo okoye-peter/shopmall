@@ -16,76 +16,27 @@
                 <div class="col-lg-2">Sum-Total</div>
             </div>
             <div class="item_wrapper">
-                <div class="rounded shadow">
-                    <div class="container-fluid">
-                        <div class="row item">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                <img src="{{ asset('assets/images/alex-haigh-fEt6Wd4t4j0-unsplash.jpg') }}" alt="">
-                                <aside class="details">
-                                    <div class="seller">Seller: UNLIMITED DISCOUNTS</div>
-                                    <a href="#" class="name">Roundneck Polo_white/green/black/navy/wine/gray</a>
-                                        <p class="tablet_price_wrapper">$ <span class="price">9.99</span></p>
-                                    <div class="flex">
-                                        <form action="" method="post">
-                                            <button><i class="far fa-heart"></i> Add To Wishlist</button>
-                                        </form>
-                                        <form action="" method="post">
-                                            <button><i class="fa fa-trash"></i> Remove from cart</button>
-                                        </form>
-                                    </div>
-                                    <div class="tablet grid">
-                                        <form action="" method="post">
-                                            <input type="text" name="quantity" value="1">
-                                            <button class="btn-reduce" type="button">
-                                                <i class="fa fa-minus"></i>
-                                            </button>
-                                            <button class="btn-increase" type="button">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </aside>
-                            </div>
-                            <div class="col-lg-2">
-                                <select name="quantity" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-2">
-                                <p class="price_wrapper">$ <span class="price">9.99</span></p>
-                            </div>
-                            <div class="col-lg-2">
-                                <p class="price_sum_wrapper">$ <span class="price">9.99</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded shadow">
-                    <div class="container-fluid">
-                        <div class="row item">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                <img src="{{ asset('assets/images/alex-haigh-fEt6Wd4t4j0-unsplash.jpg') }}" alt="">
-                                <aside class="details">
-                                    <div class="seller">Seller: UNLIMITED DISCOUNTS</div>
-                                    <a href="#" class="name">Roundneck Polo_white/green/black/navy/wine/gray</a>
-                                        <p class="tablet_price_wrapper">$ <span class="price">9.99</span></p>
-                                    <div class="flex">
-                                        <form action="" method="post">
-                                            <button><i class="far fa-heart"></i> Add To Wishlist</button>
-                                        </form>
-                                        <form action="" method="post">
-                                            <button><i class="fa fa-trash"></i> Remove from cart</button>
-                                        </form>
-                                    </div>
-                                    <div class="tablet grid">
-                                        <form action="" method="post">
-                                            <div>
+                @forelse ($carts as $cart)
+                    <div class="rounded shadow">
+                        <div class="container-fluid">
+                            <div class="row item">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <img src='{{ asset($cart->product->url) }}' alt="">
+                                    <aside class="details">
+                                        <div class="seller">Seller: UNLIMITED DISCOUNTS</div>
+                                        <a href="#" class="name">{{ $cart->product->name }}</a>
+                                            <p class="tablet_price_wrapper">$ <span class="price">{{ $cart->product->price }}</span></p>
+                                        <div class="flex">
+                                            <form action="" method="post">
+                                                <button><i class="far fa-heart"></i> Add To Wishlist</button>
+                                            </form>
+                                            <form action="{{ route('carts.delete', ['cart' => $cart->id]) }}" method="post">
+                                                @csrf
+                                                <button><i class="fa fa-trash"></i> Remove from cart</button>
+                                            </form>
+                                        </div>
+                                        <div class="tablet grid">
+                                            <form action="" method="post">
                                                 <input type="text" name="quantity" value="1">
                                                 <button class="btn-reduce" type="button">
                                                     <i class="fa fa-minus"></i>
@@ -93,34 +44,33 @@
                                                 <button class="btn-increase" type="button">
                                                     <i class="fa fa-plus"></i>
                                                 </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </aside>
-                            </div>
-                            <div class="col-lg-2">
-                                <select name="quantity" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-2">
-                                <p class="price_wrapper">$ <span class="price">9.99</span></p>
-                            </div>
-                            <div class="col-lg-2">
-                                <p class="price_sum_wrapper">$ <span class="price">9.99</span></p>
+                                            </form>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="col-lg-2">
+                                    <select name="quantity" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="price_wrapper">$ <span class="price">{{ $cart->product->price }}</span></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="price_sum_wrapper">$ <span class="price">9.99</span></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-
+                @empty
+                    
+                @endforelse
             </div>
             <div class="shadow my-5 p-3 order-details">
                 <div class="container-fluid">

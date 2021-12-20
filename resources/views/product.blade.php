@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css'/>
 @endpush
 @section('content')
     <div class="container mt-3">
@@ -18,18 +20,14 @@
                     <div class="col-lg-5 col-md-12 pl-4">
                         <div class="display_wrapper">
                             <div class="owl-carousel owl-theme grid_container" uk-lightbox="animation: scale" id="grid_container">
-                                <a class="item " href="{{ asset('assets/images/fabian-heimann-4R_WEmhx8og-unsplash.jpg') }}" data-dot="<button role='button'><img src={{ asset('assets/images/fabian-heimann-4R_WEmhx8og-unsplash.jpg') }}></button>">
-                                    <img src="{{ asset('assets/images/fabian-heimann-4R_WEmhx8og-unsplash.jpg') }}" alt="">
+                                <a class="item" href='{{ asset("$product->url") }}' data-dot="<button role='button'><img src='{{ asset("$product->url") }}'></button>">
+                                    <img src='{{ asset("$product->url") }}' alt="">
                                 </a>
-                                <a class="item " href="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}" data-dot="<button role='button'><img src={{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}></button>">
-                                    <img src="{{ asset('assets/images/djordje_jovicic-l1mVJnG7a84-unsplash.jpg') }}" alt="">
-                                </a>
-                                <a class="item " href="{{ asset('assets/images/logan-weaver-jM_xJyX-sPI-unsplash.jpg') }}" data-dot="<button role='button'><img src={{ asset('assets/images/logan-weaver-jM_xJyX-sPI-unsplash.jpg') }}></button>">
-                                    <img src="{{ asset('assets/images/logan-weaver-jM_xJyX-sPI-unsplash.jpg') }}" alt="">
-                                </a>
-                                <a class="item " href="{{ asset('assets/images/bence-balla-schottner-9JORz4CuUcI-unsplash.jpg') }}" data-dot="<button role='button'><img src={{ asset('assets/images/bence-balla-schottner-9JORz4CuUcI-unsplash.jpg') }}></button>">
-                                    <img src="{{ asset('assets/images/bence-balla-schottner-9JORz4CuUcI-unsplash.jpg') }}" alt="">
-                                </a>
+                                @foreach ($product->files as $file)    
+                                    <a class="item" href='{{ asset("$file->url") }}'data-dot="<button role='button'><img src='{{ asset("$file->url") }}'></button>">
+                                        <img src='{{ asset("$file->url") }}' alt="">
+                                    </a>
+                                @endforeach
                             </div>
 
                         </div>
@@ -37,22 +35,10 @@
                     <div class="col-lg-7 col-md-12">
                         <div class="row ml-4 details_wrapper pb-1">
                             <div class="col-lg-10">
-                                <h2 class="pr-5">Luxury Black Full Metal Digital Lava Wrist Watch- Unisex</h2>
+                                <h2 class="pr-5">{{ $product->name }}</h2>
                             </div>
                             <div class="col-lg-2">
-                                <form action="" method="post">
-                                    @csrf
-                                    
-                                    @if (1==1)    
-                                        <button type="submit"  data-bs-toggle="tooltip" data-bs-placement="top" title="remove from wishlist" name="add_to_wishlist">
-                                            <i class="fas fa-heart"></i>
-                                        </button>  
-                                    @else
-                                        <button type="submit"  data-bs-toggle="tooltip" data-bs-placement="top" title="add to wishlist" name="add_to_wishlist">
-                                            <i class="far fa-heart"></i>
-                                        </button>    
-                                    @endif
-                                </form>
+                                <add-to-wishlist-component :product="{{ collect($product->only(['id','name'])) }}">
                             </div>
                         </div>
                         <div class="description">
@@ -73,28 +59,14 @@
                             </div>
                             <h4>DESCRIPTION</h4>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                {{ $product->description }}
                             </p>
                             <div class="price_wrapper">
                                 <span class="currrency">$</span> 
-                                <span class="price">9.99</span>
+                                <span class="price">{{ $product->price }}</span>
                             </div>
-                            <form action="" method="post" data-parsley-validate id="add_to_cart">
-                                @csrf
-                                <div class="quantity-input">
-                                    <input type="text" name="quatity" value="1" data-parsley-type="integer" data-parsley-required data-parsley-min="1"> 
-
-                                    <button class="btn-reduce" type="button">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                    <button class="btn-increase" type="button">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                                <button type="submit" class="add_to_cart_btn">Add to Cart</button>
-                            </form>
+                            <add-to-cart-component :product="{{ collect($product->only(['name','id'])) }}"></add-to-cart-component>
                         </div>
-                        
                     </div>
                 </div>
                 
@@ -157,5 +129,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
     <script src="{{ asset('assets/js/product.js') }}"  defer></script>
 @endpush

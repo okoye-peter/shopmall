@@ -24,6 +24,8 @@ Vue.component('client-chat-component', require('./components/clients/ClientChatC
 Vue.component('name-component', require('./components/clients/NameComponent.vue').default);
 Vue.component('massages-component', require('./components/clients/MessagesComponent.vue').default);
 Vue.component('form-component', require('./components/clients/FormComponent.vue').default);
+Vue.component('add-to-cart-component', require('./components/clients/AddToCartComponent.vue').default);
+Vue.component('add-to-wishlist-component', require('./components/clients/AddToWishlistComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

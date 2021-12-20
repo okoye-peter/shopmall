@@ -6,11 +6,13 @@ use Illuminate\View\Component;
 
 class AddProductsComponent extends Component
 {
+    public $index = 0;
     /**
      * Create a new component instance.
      *
      * @return void
      */
+
     public function __construct()
     {
         //

@@ -11,8 +11,8 @@
                         <li class="nav-item drop">
                             <a class="nav-link" href="#"><span>{{auth()->user()->name}}</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="drop-down drop-toggle item_list">
-                                <li class="text-center"><a class="nav-link" href="#">Cart (<span class="cart_quantity">3</span>)</a></li>
-                                <li class="text-center"><a class="nav-link" href="#">Wishlist (<span class="wishist_quantity">3</span>)</a></li>
+                                <li class="text-center"><a class="nav-link" href="#">Cart (<span class="cart_quantity">{{ auth()->check() ? auth()->user()->carts->count() : 0 }}</span>)</a></li>
+                                <li class="text-center"><a class="nav-link" href="#">Wishlist (<span class="wishist_quantity">{{ auth()->check() ? auth()->user()->wishlists->count() : 0 }}</span>)</a></li>
                                 <li>
                                     <form action="{{ route('logout') }}" method="post" class="logout">
                                         @csrf
@@ -62,7 +62,9 @@
             <!-- Logo -->
             <div class="col-lg-3 col-md-3 col-sm-12 col-12">
                 <!-- shop fest -->
-                <img src="{{ asset('assets/images/logo.jpg') }}" alt=""> <span>Teberna laetus</span>
+                <a href="{{route('home')}}" class="logo_link">
+                    <img src="{{ asset('assets/images/logo.jpg') }}" alt=""> <span>Teberna laetus</span>
+                </a>
             </div>
             <!-- search form -->
             <div class="col-lg-5 col-md-5 col-sm-12 col-12 align-self-center">
@@ -100,18 +102,18 @@
                         <i class="fa fa-heart fa-2x"></i>
                         <aside>
                             <span class="wishlist_wrapper">
-                                <span class="wishlist">0</span> item(s)
+                                <span class="wishlist">{{ auth()->check() ? auth()->user()->wishlists->count() : 0 }}</span> item(s)
                             </span>
                             <span>wishlist</span>
                         </aside>
                     </section>
                 </a>
-                <a href="#">
+                <a href="{{ route('carts.index') }}">
                     <section>
                         <i class="fa fa-shopping-basket fa-2x"></i>
                         <aside>
                             <span class="cart_wrapper">
-                                <span class="cart">0</span> item(s)
+                                <span class="cart">{{ auth()->check() ? auth()->user()->carts->count() : 0 }}</span> item(s)
                             </span>
                             <span>cart</span>
                         </aside>
@@ -135,11 +137,11 @@
             <li class="nav-item @if(request()->routeIs('home')) active @endif">
                 <a class="nav-link" href="{{ route('home') }}"><i class="fa fa-home"></i> </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SHOP</a>
+            <li class="nav-item @if(request()->routeIs('products.index')) active @endif">
+                <a class="nav-link" href="{{ route('products.index') }}">SHOP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CART</a>
+                <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CHECKOUT</a>

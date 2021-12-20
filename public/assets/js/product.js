@@ -25,20 +25,6 @@
        $('#add_to_cart').parsley();
    });
 
-   function setProductQuantity(changeBy) {
-       let input = document.querySelector('input[name=quatity]');
-       if (input.value == 1 && changeBy == -1)
-           return
-       input.value = parseInt(input.value) + changeBy;
-
-   }
-
-   // increase product quantity
-   document.querySelector('.btn-increase').addEventListener('click', setProductQuantity.bind(null, 1))
-
-   // decrease product quantity
-   document.querySelector('.btn-reduce').addEventListener('click', setProductQuantity.bind(null, -1))
-
    // sclick carousel
    $('#related_product').slick({
        slidesToShow: 5,

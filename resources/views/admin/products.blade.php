@@ -33,9 +33,6 @@
                 top: 144px;
             }
             .jDeleteRow.btn-delete-row{
-                /* position: absolute;
-                top: 40%;
-                right: 18px; */
                 border: 0px;
                 display: block;
                 width: 18px;
@@ -53,8 +50,38 @@
                 opacity: 0.2;
                 cursor:default;
             }
+            small{
+                color:red;
+            }
         </style>
     @endpush
+    @if ($errors->any())
+        <div class="row">
+            <div class="alert alert-danger alert-dismissible fade show col-12" role="alert">
+                <strong>Validation Failed!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <ul>
+                    @if ($errors->has('name'))
+                        <li>{{ $errors->first('name') }}</li>
+                    @endif 
+                    @if ($errors->has('description'))
+                        <li>{{ $errors->first('description') }}</li>
+                    @endif 
+                    @if ($errors->has('price'))
+                        <li>{{ $errors->first('price') }}</li>
+                    @endif 
+                    @if ($errors->has('quantity'))
+                        <li>{{ $errors->first('quantity') }}</li>
+                    @endif 
+                    @if ($errors->has('avatar'))
+                        <li>{{ $errors->first('avatar') }}</li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    @endif
     <div class="row page-titles mx-0">
         <div class="col-sm-6 p-md-0">
             <div class="welcome-text">
@@ -147,7 +174,10 @@
             }
 
             window.onload = () => {
-                instatiateDropzone('dropZone');
+                $('.dropzone').each(function(index, dropzone){
+                    $(dropzone).attr('id', generateUniqeID());
+                    instatiateDropzone($(dropzone).attr('id'));
+                })
             }
 
             function instatiateDropzone(id) {
@@ -278,14 +308,33 @@
                 var newRow = lastRow.clone(true, true); //use true to copy event bindings with rows.  Doesn't always work with 3rd party plugins.
                 newRow.find('input').val('');
                 newRow.addClass('mt-3');
-                let dz = newRow.find('.dz-message.dropzone');
+                newRow.find('.dz-message.dropzone').remove();
+                let dz = $(('<div class="dz-default dz-message dropzone mb-3"></div>'));
                 dz.attr('id', generateUniqeID());
+                dz.insertBefore( newRow.find(".form-group").last());
                 setTimeout(() => {
                     instatiateDropzone(dz.attr('id'));
                 }, 1500);
                 newRow.find('.jDeleteRow').removeAttr("disabled");
+                // remove error message if any
+                newRow.find('small').remove();
+                $(`#${dz.attr('id')}`).closest('.shadow').find('input.images_id').val('');
+                newRow.find('textarea').val('');
                 newRow.insertAfter(lastRow);
+                // set name for hidden ids input
+                let index = $(this).closest('form').find('.shadow').index(newRow);
+                newRow.find('input.images_id').attr('name', `ids_${index}`);
             });
         </script>
+        @if (session()->has('success'))
+            <script>
+                swal({
+                    title: "Success",
+                    text: @json(session()->get('success')),
+                    icon: "success",
+                    button: "ok",
+                });
+            </script>
+        @endif
     @endpush
 </x-admin-layout>

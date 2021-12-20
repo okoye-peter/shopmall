@@ -19,7 +19,7 @@
                     <h1 class="animated animate__fadeInLeft">GREAT RANGE OF <br> EXCLUSIVE T-SHIRTS <br> PACKAGES</h1>
                     <p class="animated animate__flipInX">Exclusive T-shirts Packages to Suit every need</p>
                     <p class="animated animate__fadeInDownBig">Starting at: <span class="price">$9.99</span></p>
-                    <a class="animated animate__fadeInUp" href="">Shop Now</a>
+                    <a class="animated animate__fadeInUp" href="{{ route('products.index') }}">Shop Now</a>
                 </div>    
             </div>
             <div class="item">
@@ -28,7 +28,7 @@
                     <h1 class="animated" style="animation-delay: 0.5s">All New Hand Bags <br> Affordable for all </h1>
                     <p class="animated" style="animation-delay: 0.5s">up to 25% Flat Sale</p>
                     <p class="animated" style="animation-delay: 0.5s">@ <span class="price">$29.99</span></p>
-                    <a class="animated" href="" style="animation-delay: 0.5s">Shop Now</a>
+                    <a class="animated" href="{{ route('products.index') }}" style="animation-delay: 0.5s">Shop Now</a>
                 </div>
             </div>
             <div class="item">
@@ -36,7 +36,7 @@
                 <div class="carousel-caption">
                     <h1 class="animated" style="animation-delay: 0.5s">EXTRA 25% OFF <br><span>Online Payment <span></span></span></h1>
                     <p class="animated" style="animation-delay: 0.5s">Accessories to complete <br> your everyday Outfit.</p>
-                    <a class="animated" style="animation-delay: 0.5s" href="">Shop Now</a>
+                    <a class="animated" style="animation-delay: 0.5s" href="{{ route('products.index') }}">Shop Now</a>
                 </div>
             </div>
         </div>

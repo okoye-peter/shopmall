@@ -6,6 +6,7 @@
     background: rgb(231 227 227 / 24%);
     border-bottom: 1px solid #cccccc96;
     color: #808080c2;
+    font-family: 'Roboto';
     font-size: 12px;
 }
 
@@ -66,21 +67,23 @@
 
 .section_two {
     padding: 0.5em 0em 1em;
+    font-family: 'Roboto';
 }
 
 .section_two .container .row .col-lg-3 img {
-    height: 3.5em;
-    width: 3.5em;
+    height: 2.5em;
+    width: 2.5em;
     border-radius: 50%;
     display: inline-block;
     margin-right: 1em;
 }
 
-.section_two .container .row .col-lg-3 span {
-    font-family: emoji;
+.section_two .container .row .col-lg-3 a {
+    font-family: 'Calistoga';
     color: #05234f;
     font-variant: small-caps;
     font-size: 24px;
+    text-decoration: none;
 }
 
 .section_two .container .row .col-lg-5 form {
@@ -197,7 +200,6 @@
     font-size: 12px;
     justify-self: flex-start;
     padding-left: 0.5em;
-    font-family: emoji;
 }
 
 .section_two .container .row .col-lg-4 a section aside span {

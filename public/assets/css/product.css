@@ -1,6 +1,6 @@
 .owl-theme .owl-dots {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .owl-theme .owl-dots .owl-dot:not(:first-child),
