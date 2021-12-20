@@ -11,8 +11,8 @@
                         <li class="nav-item drop">
                             <a class="nav-link" href="#"><span>{{auth()->user()->name}}</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="drop-down drop-toggle item_list">
-                                <li class="text-center"><a class="nav-link" href="#">Cart (<span class="cart_quantity">{{ auth()->check() ? auth()->user()->carts->count() : 0 }}</span>)</a></li>
-                                <li class="text-center"><a class="nav-link" href="#">Wishlist (<span class="wishist_quantity">{{ auth()->check() ? auth()->user()->wishlists->count() : 0 }}</span>)</a></li>
+                                <li class="text-center"><a class="nav-link" href="{{ route('carts.index') }}">Cart (<span class="cart_quantity">{{ auth()->check() ? auth()->user()->carts->count() : 0 }}</span>)</a></li>
+                                <li class="text-center"><a class="nav-link" href="{{ route('wishlists.index') }}">Wishlist (<span class="wishist_quantity">{{ auth()->check() ? auth()->user()->wishlists->count() : 0 }}</span>)</a></li>
                                 <li>
                                     <form action="{{ route('logout') }}" method="post" class="logout">
                                         @csrf
@@ -97,7 +97,7 @@
                 </form>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                <a href="#">
+                <a href="{{ route('wishlists.index') }}">
                     <section>
                         <i class="fa fa-heart fa-2x"></i>
                         <aside>

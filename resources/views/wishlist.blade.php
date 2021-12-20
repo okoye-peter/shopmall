@@ -8,20 +8,22 @@
 @section('content')
     <div class="container">
         <div class="row my-4">
-            {{-- @forelse ([] as $item) --}}
+            @forelse ($wishlists as $wishlist)
                 <div class="col-lg-3 col-md-4 col-sm-12 col-12">
                     <div class="shadow">
                         <div class="image_wrapper">
-                            <img src="{{ asset('assets/images/pat-taylor-12V36G17IbQ-unsplash.jpg') }}" alt="">
+                            <img src="{{ asset($wishlist->product->url) }}" alt="">
                         </div>
                         <div class="name_wrapper">
-                            <a href="#" class="name">Junming Watch Man Business Vogue Male Form Machine Form Wris <span class="price">$ 11.99</span></a>
+                            <a href="#" class="name">{{ $wishlist->product->name }} <span class="price">$ {{$wishlist->product->price}}</span></a>
                         </div>
                         <div class="grid">
                             <form action="" method="post">
                                 <button type="submit">submit</button>
                             </form>
-                            <form action="" method="post">
+                            <form action="{{ route('wishlists.delete') }}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $wishlist->id }}">
                                 <button type="submit">
                                     <i class="fa fa-trash"></i>
                                     <span>Remove</span>
@@ -30,9 +32,11 @@
                         </div>
                     </div>
                 </div>
-            {{-- @empty
-                    
-            @endforelse --}}
+            @empty
+                <div class="h-screen grid grid-cols-1 gap-4 content-center">
+                    <h1 class="text-5xl text-gray-800 opacity-50 mt-5 text-center" style="height: fit-content;font-family: 'Calistoga';">No items in your wishlist</h1>
+                </div>        
+            @endforelse
         </div>
     </div>
 @endsection
